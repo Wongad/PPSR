@@ -1,0 +1,117 @@
+/**
+ * CSS Styles for Annual Report 
+ */
+.node-type-annual-report .field-group-tabs-wrapper,
+.node-type-annual-report h1, 
+.node-type-annual-report h2, 
+.node-type-annual-report h3, 
+.node-type-annual-report h4, 
+.node-type-annual-report h5, 
+.node-type-annual-report h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.node-type-annual-report h1,
+.node-type-annual-report h2,
+.node-type-annual-report h4 {
+  color: #00568D;
+}
+.node-type-annual-report h2 {
+  font-size: 2.3em;
+  font-weight: normal;
+}
+.node-type-annual-report h3 {
+  font-size: 2em;
+}
+.node-type-annual-report h4 {
+  font-size: 1.6em;
+}
+.node-type-annual-report h5 {
+  font-size: 1.2em;
+  color: #444A55;
+}
+
+/**
+ * Image styles
+ */
+.node-type-annual-report img {
+	padding: 0.5em;
+}
+ .node-type-annual-report .file-icon {
+    padding: 0;
+}
+/**
+ * Table styles
+ */
+
+.AR-blue-one tr, .AR-blue-one th, .AR-blue-one td,
+.AR-blue-two tr, .AR-blue-two th, .AR-blue-two td {
+	border: 1px solid #e6e7e8;
+	padding: 0.5em;
+}
+.AR-blue-one thead th,
+.AR-blue-two thead th {
+	background-color: #00558F;
+	color: #FFF;
+}
+.AR-blue-one tbody th,
+.AR-blue-two tbody th {
+	background-color: #DCE1EC;
+	color: #00558F;
+}
+
+.AR-blue-two tr:last-of-type td,
+.AR-blue-two tr:last-of-type th {
+	background-color: #444955;
+	color: #FFF;
+}
+.AR-grey-one tr, .AR-grey-one th, .AR-grey-one td,
+.AR-grey-two tr, .AR-grey-two th, .AR-grey-two td {
+	border: 1px solid #CCC;
+	padding: 0.5em;
+}
+.AR-grey-one thead th,
+.AR-grey-two thead th {
+	background-color: #E7E7EC;
+	color: #444A55;
+}
+.AR-grey-one tbody th,
+.AR-grey-two tbody th {
+	background-color: #444A55;
+	color: #FFF;
+}
+.AR-grey-two tr:last-of-type td {
+	background-color: #DCE1EC;
+	color: #00558F;
+}
+.AR-grey-two tr:last-of-type th {
+	background-color: #00558F;
+	color: #FFF;
+}
+
+/**
+ * Vertical tab styles
+ */
+.node-type-annual-report ul.vertical-tabs-list li.selected {
+	border-left: 4px solid #00558F;
+}
+
+@media all and (max-width: 479px) {
+ .vertical-tabs {
+  width: 99% !important;
+  margin: 0 !important;
+  }
+.vertical-tabs-list {
+  position: fixed !important;
+  bottom: 0;
+  left: 1px;
+  width: 24% !important;
+  font-size: 0.8em;
+  margin: 0 !important;
+  z-index: 500;
+ }
+.vertical-tabs-panes {
+  width: 80%;
+  margin-left: 19%
+ }
+}

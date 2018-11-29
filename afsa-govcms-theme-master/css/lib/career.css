@@ -1,0 +1,295 @@
+/**
+ * CSS Styles for Current Vacancies content type
+*/
+ .node-current-vacancies {
+  background: #E7EFF6 url('../../images/headerbg.png') no-repeat right bottom;
+  float: left;
+  width: 100%;
+}
+.node-type-current-vacancies #page-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+}
+.node-current-vacancies .group-left, 
+.node-current-vacancies .group-right, 
+.node-current-vacancies .group-footer,
+.node-current-vacancies .group-header .field-name-field-tagline {
+  font-family: 'Roboto Slab', serif;
+}
+.node-current-vacancies .group-header,
+.node-current-vacancies .group-left,
+.node-current-vacancies .group-right,
+.node-current-vacancies .group-footer {
+  color: #00568d;
+}
+.node-current-vacancies .group-header a,
+.node-current-vacancies .group-left a,
+.node-current-vacancies .group-right a,
+.node-current-vacancies .group-footer a {
+  border-bottom: 1px dotted;
+}
+
+.node-current-vacancies .field-name-field-feature-image {
+  text-align: center;
+  max-height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+.node-current-vacancies .field-name-field-feature-image img {
+  width: 100%;
+}
+.node-current-vacancies .group-header .field-name-field-closing-date {
+  float: right;
+  margin: -1.5em 0 0 0; 
+  z-index: 1;
+  background-color: #FFF;
+  position: relative;
+  padding: 0 1em;
+}
+.node-current-vacancies span.date-display-single {
+  font-size: initial;
+}
+.node-current-vacancies .group-header .field-name-field-tagline {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+.node-current-vacancies .group-left {
+  padding-left: 3em;
+  margin-right: -6em;
+}
+.node-current-vacancies .group-right {
+  padding-left: 3em;
+}
+.node-current-vacancies .group-left .field-items {
+  display: table;
+}
+.node-current-vacancies .field-name-field-aps-classification .field-item,
+.node-current-vacancies .field-name-field-work-hours .field-item,
+.node-current-vacancies .field-name-field-job-type .field-item,
+.node-current-vacancies .field-name-field-job-location .field-item {
+  display: inline;
+  padding-right: 0.44em;
+  float: left;
+}
+.node-current-vacancies .group-left .field,
+.node-current-vacancies .group-right .field {
+  clear: left;
+  max-width: 94%;
+}
+.node-current-vacancies .field-name-field-aps-classification:before,
+.node-current-vacancies .field-name-field-work-hours:before,
+.node-current-vacancies .field-name-field-job-type:before,
+.node-current-vacancies .field-name-field-job-location:before,
+.node-current-vacancies .field-name-field-contact-officer:before,
+.node-current-vacancies .field-name-field-contact-officer-phone:before,
+.node-current-vacancies .field-name-field-event-email:before {
+  font-family: 'FontAwesome';
+  margin: -0.5em 0.2em 0.2em 0;
+  float: left;
+}
+.node-current-vacancies .field-name-field-job-location:before {
+  font-size: 3.2em;
+  content: "\f041";
+}
+.node-current-vacancies .field-name-field-job-type:before {
+  font-size: 2.2em;
+  content: "\f0b1";
+}
+.node-current-vacancies .field-name-field-work-hours:before {
+  font-size: 2.5em;
+  content: "\f017";
+}
+.node-current-vacancies .field-name-field-aps-classification:before {
+  font-size: 2em;
+  content: "\f19c";
+}
+.node-current-vacancies .field-name-field-contact-officer:before {
+  font-size: 2.2em;
+  content: "\f2be";
+}
+.node-current-vacancies .field-name-field-contact-officer-phone:before {
+  font-size: 2.6em;
+  content: "\f095";
+}
+.node-current-vacancies .field-name-field-event-email:before {
+  font-size: 2.2em;
+  content: "\f003";
+}
+.node-current-vacancies .field-name-field-aps-classification .field-item:after,
+.node-current-vacancies .field-name-field-job-location .field-item:after {
+  content: ",";
+}
+.node-current-vacancies .field-name-field-work-hours .field-item:after,
+.node-current-vacancies .field-name-field-job-type .field-item:after {
+  content: " /";
+}
+.node-current-vacancies .field-name-field-aps-classification .field-item:last-of-type:after,
+.node-current-vacancies .field-name-field-job-location .field-item:last-of-type:after, 
+.node-current-vacancies .field-name-field-work-hours .field-item:last-of-type:after,
+.node-current-vacancies .field-name-field-job-type .field-item:last-of-type:after {
+  content: "";
+}
+.node-current-vacancies img.file-icon {
+  display: none;
+}
+.node-current-vacancies .field .file::before {
+    font-size: 2.3em;
+    content: "\f019";
+    font-family: 'FontAwesome';
+    margin: -0.3em 0.2em 0.2em 0em;
+    float: left;
+}
+.node-current-vacancies .field-type-link-field a.grey-btn {
+  border-bottom: none;
+  border-bottom-left-radius: 1.4em;
+  margin-bottom: 1em;
+}
+.node-current-vacancies .field-type-link-field a.grey-btn:before {
+  font-family: 'FontAwesome';
+  margin: -0.3em 0.4em -1em 0;
+  font-size: 1.8em;
+  content: "\f05a";
+  float: left;
+}
+.node-current-vacancies .field-name-field-tagline {
+  padding: 0 1em;
+}
+.node-current-vacancies fieldset {
+  background-color: #00568d;
+  border: none;
+  border-radius: 1em;
+  margin: 0 2em 1em;
+  padding: 1em 1em 2em;
+  color: #FFF;
+}
+.node-current-vacancies fieldset a {
+  color: #FFF;
+  border-bottom: 1px dotted;
+}
+.node-current-vacancies a.fieldset-title {
+  position: absolute;
+  width: 94%;
+  padding: 0.4em;
+  border: none;
+}
+.node-current-vacancies .fieldset-legend {
+  background: none !important;
+  padding: 1em 0.8em 0 0 !important;
+  height: 0;
+}
+.node-current-vacancies .fieldset-legend:after {
+  font-family: 'FontAwesome';
+  font-size: 1.6em;
+  content: "\f059";
+  right: 2em;
+  position: absolute;
+  color: #FFF;
+}
+/**
+ * CSS Styles for Current Vacancies heading styles
+*/
+.node-current-vacancies .field-name-title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  clear: both;
+}
+.node-current-vacancies h4 {
+  margin-bottom: -0.4em;
+  line-height: 0;
+}
+/**
+ * CSS Styles for Talent Pool heading styles
+*/
+.talent-pool .group-left, 
+.talent-pool .group-right,
+.talent-pool .group-header {
+  min-width: 84%;
+  font-size: 0.84em;
+}
+.talent-pool .views-row h2 a {
+  color: #fff;
+  background-color: #00568D;
+}
+.talent-pool .views-row h2 a::after {
+  content: "";
+}
+.talent-pool .views-row h2 a:hover,
+.talent-pool .views-row h2 a:focus {
+  background-color: #444444;
+}
+/**
+ * CSS Styles for Current Vacancies listing page
+*/
+.page-about-careers-current-vacancies .node-current-vacancies .field-name-title h2 a {
+  background-color: #F1F1F1;
+  margin-bottom: 1.3em;
+  text-align: left;
+  font-weight: normal;
+  z-index: 3;
+  display: block;
+  position: relative;
+}
+.page-about-careers-current-vacancies .node-current-vacancies .field-name-title h2 a:hover, 
+.page-about-careers-current-vacancies .node-current-vacancies .field-name-title h2 a:focus {
+  background-color: #00568D;
+}
+.page-about-careers-current-vacancies .node-current-vacancies .group-header {
+  clear: both;
+  float: left;
+  width: 99%;
+}
+.page-about-careers-current-vacancies .node-current-vacancies .group-left, 
+.page-about-careers-current-vacancies .node-current-vacancies .group-right {
+  font-size: 0.84em;
+}
+.page-about-careers-current-vacancies .views-row {
+ width: 98%;
+ position: relative;
+}
+.page-about-careers-current-vacancies .views-row .group-header {
+ padding-bottom: 1em;
+}
+.page-about-careers-current-vacancies .views-row .ds-2col-stacked > .group-right {
+ width: 64%;
+}
+.page-about-careers-current-vacancies .views-row .ds-2col-stacked > .group-left {
+ width: 33.3%;
+}
+.page-about-careers-current-vacancies .node-current-vacancies .field-name-node-link a:hover,
+.page-about-careers-current-vacancies .node-current-vacancies .field-name-node-link a:focus {
+ background-color: #FFF;
+ opacity: 0.3;
+}
+.page-about-careers-current-vacancies .node-current-vacancies .field-name-node-link a {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+    margin-top: 2em;
+    z-index: 1;
+}
+.page-about-careers .node-current-vacancies .field-name-field-feature-image {
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    max-height: 15.3em;
+    z-index: 0;
+    margin-top: -4em;
+}
+
+@media all and (max-width: 489px) {
+    .page-about-careers .node-current-vacancies .field-name-field-feature-image {
+     display: none;
+    }
+    .node-current-vacancies{
+     padding-bottom: 1em;
+    }
+    .talent-pool .views-row {
+     width: 99%;
+    }
+}

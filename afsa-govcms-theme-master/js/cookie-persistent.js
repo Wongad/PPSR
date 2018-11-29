@@ -1,0 +1,2 @@
+$(document).ready(function(){if(document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/,"$1")!=="true"){$('[class*="section-"] .view-announcements').show();$('.pane-announcements').show()}
+else{$('[class*="section-"] .view-announcements').hide();$('.pane-announcements').hide()}});$('a.close-window').click(function(){$('[class*="section-"] .view-announcements').slideUp();$('.pane-announcements').slideUp();document.cookie="doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT"});$(window).load(function(){$(document).responsiveTables()})

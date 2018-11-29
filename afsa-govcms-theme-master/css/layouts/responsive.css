@@ -1,0 +1,1446 @@
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/**
+ * Center the page.
+ *
+ * For screen sizes larger than 1200px, prevent excessively long lines of text
+ * by setting a max-width.
+ */
+.region-bottom .block {
+ margin-left: auto;
+ margin-right: auto;
+}
+article, 
+.page-glossary .view-glossary-listing .item-list, .ds-1col.node-creditor-meeting {
+ width: 65%;
+}
+.views-row article {
+ width: 100%;
+}
+.view-footer {
+ width: 90%;
+ float: left;
+}
+/* Apply the shared properties of grid items in a single, efficient ruleset. */
+#header {
+ background: #00568d url('../../images/headerbg.png') no-repeat right bottom;
+}
+#navigation {
+ background-color: #ECEDEE;
+}
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -ms-box-sizing: border-box;
+ box-sizing: border-box;
+ word-wrap: normal;
+ *behavior: url("/path/to/boxsizing.htc");
+ _display: inline;
+ _overflow: hidden;
+ _overflow-y: visible;
+ padding-left: 1em;
+ padding-right: 1em;
+}
+/* Services and languages block */
+.languages > br, 
+.online-services > br {
+ display: none;
+}
+a.contactus {
+ font-size: 0.78em;
+ padding-top: 0.9em;
+ color: #FFF;
+ display: block;
+}
+a.contactus .fa {
+ padding-top: 0.2em;
+}
+
+/* Specify site environment block */
+.environ {
+ position: absolute;
+ margin: 0;
+ color: red;
+ z-index: 99;
+ top: -1em;
+ width: 6em;
+ left: 10%;
+}
+
+/* Announcement pane */
+.front a.close-window {
+ margin: -0.5em 2em;
+}
+a.close-window {
+ text-decoration: none !important;
+ float: right
+}
+a.close-window::after {
+ content: '\f057';
+ font-family: 'FontAwesome';
+ float: right;
+ margin: -1.8em -1.4em;
+}
+.pane-announcements {
+ background-color: #000;
+ color: #FFF;
+ width: 100%;
+}
+.region-highlighted .view-announcements li.views-row h2,
+.region-highlighted .view-announcements li.views-row h2 a {
+ color: #FFF;
+ text-decoration: none;
+ }
+.region-highlighted .view-announcements li.views-row a,
+.pane-announcements a {
+ color: #FFF;
+ text-decoration: underline;
+}
+.pane-announcements .view-content {
+ width: 80%;
+}
+.pane-announcements .item-list:before {
+ content: '\f06a';
+ font: 6.5em 'FontAwesome';
+ color: #FFF;
+ display: inline-block;
+ float: right;
+ margin-right: -20%;
+}
+
+/* Landing pages and home page boxes */
+.page-insolvency .pane-views-panes .pane-title a {
+ color: #7b2972;
+ display: inline-block;
+ width: 100%;
+ padding: 1em 2em 0.4em;
+ margin: -1em -2em -0.4em;
+}
+.page-insolvency .pane-views-panes .pane-title a:hover, 
+.page-insolvency .pane-views-panes .pane-title a:focus {
+ color: #fff;
+ background-color: #7b2972;
+ text-decoration: none;
+}
+[class*="section-"] .views-row h2 a {
+ color: #00568D;
+ display: inline-block;
+ width: 100%;
+ padding: 1em 2em 0.4em;
+ margin: -1em -2em -0.4em;
+}
+[class*="section-"] .views-row h2 a:hover, 
+[class*="section-"] .views-row h2 a:focus {
+ color: #fff;
+ background-color: #00568D;
+ text-decoration: none;
+}
+[class*="section-"] .views-row p,
+.page-insolvency .pane-views-panes p {
+ margin-top: 0;
+}
+[class*="section-"] .views-row .field-items, 
+.page-insolvency .pane-views-panes .field-content {
+ font-size: 85%;
+ padding-top: 1em;
+}
+[class*="section-"] .view-careers .views-row .field-items {
+ padding-top: 0;
+}
+.pane-views-panes h2.pane-title,
+.views-row h2.node__title, 
+[class*="section-"] .views-row h2 {
+ font-size: 1.4em;
+ margin: 0;
+}
+.pane-views-panes h2.pane-title a:after,
+.front .panels-flexible-region-1-top_right h3 a:after, 
+.front .panels-flexible-region-1-top_left h3 a:after,
+[class*="section-"] .views-row h2 a:after {
+ content: '\f105';
+ font-family: 'FontAwesome';
+ float: right;
+ margin-right: -0.4em;
+}
+.front .panels-flexible-region-1-top_right, 
+.front .panels-flexible-region-1-top_left {
+ background-color: #ECEDEE;
+ width: 43%;
+ padding: 0 1em;
+ border-top: 6px solid;
+ overflow: hidden;
+}
+.front .panels-flexible-region-1-top_right h3 a, 
+.front .panels-flexible-region-1-top_left h3 a {
+ display: inline-block;
+ width: 100%;
+ padding: 1em 3em 0.4em;
+ margin: -1em -3em -0.4em;
+}
+.front .panels-flexible-region-1-top_left h3 a:hover, 
+.front .panels-flexible-region-1-top_left h3 a:focus {
+ color: #fff;
+ background-color: #7b2972;
+ text-decoration: none;
+}
+.front .panels-flexible-region-1-top_right h3 a:hover, .front .panels-flexible-region-1-top_right h3 a:focus {
+ color: #fff;
+ background-color: #046274;
+ text-decoration: none;
+}
+.front .panels-flexible-region-1-top_left h3 a {
+ color: #7b2972;
+}
+.front .panels-flexible-region-1-top_left {
+ border-color: #7b2972;
+ float: left;
+}
+.front .panels-flexible-region-1-top_right h3 a {
+ color: #046274;
+} 
+.front .panels-flexible-region-1-top_right {
+ border-color: #046274;
+ float: right;
+}
+.front .panels-flexible-region-1-top_right li, 
+.front .panels-flexible-region-1-top_left li {
+ list-style: none;
+ font-size: 90%;
+ margin: 0.2em 0 0.4em -0.5em;
+}
+.front .panels-flexible-region-1-top_right ul, 
+.front .panels-flexible-region-1-top_left ul {
+ margin-top: -0.5em;
+}
+.front .panels-flexible-region-1-top_right li a::before, 
+.front .panels-flexible-region-1-top_left li a::before {
+ content: '\f105';
+ font-family: 'FontAwesome';
+ float: left;
+ margin-left: -1.3em;
+}
+.front .panels-flexible-row-1-main-row .panels-ipe-portlet-content ul {
+ padding-left: 1.4em;
+}
+/* View tables styles */
+.views-table {
+ width: 100%;
+ font-size: 0.9em;
+}
+.views-table th {
+ background-color: #00568D;
+ color: #fff;
+ padding: 0.4em;
+}
+.views-table td {
+ padding: 0.4em;
+}
+.region-bottom {
+ background-color: #000;
+ color: #FFF;
+ font-size: 75%;
+ padding: 1px 1em;
+}
+/* Containers for grid items and flow items. */
+#header,
+#main,
+#footer {
+ *position: relative;
+ *zoom: 1;
+}
+#header:before,
+#header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+ content: "";
+ display: table;
+}
+#header:after,
+#main:after,
+#footer:after {
+ clear: both;
+}
+/* Feedback form elements. */
+#webform-client-form-10041 .form-actions, 
+#webform-client-form-1 .form-actions {
+ float: right;
+ margin-top: -3.4em;
+}
+#edit-submitted-was-this-information-helpful-options {
+ width: 230px;
+ float: right;
+}
+/* Footer blocks on large desktop display. */
+#footer .block {
+ float: left;
+ padding-right: 3.4em;
+}
+#footer .block:last-child {
+ float: right;
+ text-align: right;
+ padding: 0;
+}
+
+/* Header blocks on large desktop display. */
+.region-header .block {
+ float: right;
+}
+.region-header .block.even {
+ clear: right;
+}
+.online-services a.atcb-link {
+ color: #222;
+ padding: 10px 18px;
+ background-color: #FFF;
+ min-width: 170px;
+}
+.languages a.atcb-link {
+ padding: 10px;
+}
+.region-header .languages {
+ font-size: 0.7em;
+ margin-bottom: 2.5em;
+}
+.region-header .form-item {
+ margin: 0;
+}
+.region-header .form-text {
+ width: 85%;
+ border: none;
+}
+.region-header .search-form-widget {
+ min-width: 170px;
+ background-color: #FFF;
+ padding: 8px 18px;
+ margin-left: 1em;
+}
+.views-exposed-form .views-exposed-widget .form-submit {
+ margin-top: 1em;
+}
+.region-header .search-form-widget input[type="submit"] {
+ width: 2.6em;
+ height: 2.4em;
+ text-indent: -1000px;
+ background-color: transparent;
+ float: right;
+ margin-top: -2em;
+ margin-right: -2.2em;
+}
+.region-header .form-type-textfield::after {
+ content: '\f002';
+ font-family: 'FontAwesome';
+ color: #222;
+ font-size: 1.3em;
+ float: right;
+ margin-top: -5px;
+}
+/* Search result page */
+#search-api-page-search-form .form-text {
+ max-width: 40%;
+}
+/* Landing pages quicktabs */
+#quicktabs-multilingual_resources {
+ font-size: 90%;
+ overflow: hidden;
+}
+#quicktabs-view__level_1_landing_page__default {
+ background-color: #ECEDEE;
+ font-size: 90%;
+ overflow: hidden;
+ position: relative;
+}
+#quicktabs-multilingual_resources .item-list {
+ float: left;
+ width: 20%; 
+} 
+#quicktabs-view__level_1_landing_page__default .item-list {
+ float: left;
+ width: 40%;
+}
+#quicktabs-multilingual_resources .item-list ul.quicktabs-tabs, 
+#quicktabs-view__level_1_landing_page__default .item-list ul.quicktabs-tabs {
+ margin-bottom: 0;
+}
+#quicktabs-view__level_1_landing_page__default .field-content {
+ font-size: 1.1em;
+}
+#quicktabs-view__level_1_landing_page__default .field-content a::before {
+ content: '\f054';
+ font-family: 'FontAwesome';
+ float: left;
+ margin-left: -1.3em;
+ font-size: 0.7em;
+ margin-top: 0.28em;
+}
+#quicktabs-multilingual_resources ul.quicktabs-tabs li, 
+#quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li {
+ display: block;
+ padding: 1em;
+ margin-left: -30px;
+ border: 2px solid #fff;
+ white-space: inherit;
+ background-color: #E4D4E3;
+}
+#quicktabs-multilingual_resources ul.quicktabs-tabs li {
+ background-color: #C7CCDF;
+}
+#quicktabs-container-multilingual_resources {
+ float: left;
+ width: 74%;
+ margin-left: 1em;
+}
+#quicktabs-container-view__level_1_landing_page__default {
+ padding: 0 2em 2em;
+ position: absolute;
+ left: 40.1%;
+ top: 0;
+ width: 54%;
+}
+#quicktabs-multilingual_resources ul.quicktabs-tabs li.active {
+ background-color: #00568D;  
+}
+#quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active {
+ background-color: #7B2972;
+}
+#quicktabs-multilingual_resources ul.quicktabs-tabs li.active a,
+#quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active a {
+ color: #FFF;
+ position: relative;
+}
+#quicktabs-multilingual_resources ul.quicktabs-tabs li.active a::after,
+#quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active a::after {
+ content: '\f0da';
+ font-family: 'FontAwesome';
+ margin-top: -0.33em;
+ margin-right: -0.8em;
+ font-size: 2em;
+ position: absolute;
+ right: 0;
+ z-index: 99;
+}
+#quicktabs-multilingual_resources ul.quicktabs-tabs li.active a::after {
+ color: #00568D;
+}
+#quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active a::after {
+ color: #7B2972;
+}
+#quicktabs-multilingual_resources ul.quicktabs-tabs li a,
+#quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li a {
+ display: block;
+ color: #222;
+}
+/* Slideshow landing page block */
+.list-element {
+ list-style: none;
+}
+.list-element .center-wrapper {
+ position: absolute;
+ z-index: 77;
+ top: 3em;
+ width: 77%;
+}
+.list-element .center-wrapper .panel-col-first {
+ background-color: #fff;
+ padding: 0 1em;
+ min-height: 15em;
+}
+.transparent .list-element .center-wrapper .panel-col-first {
+ background-color: transparent;
+ text-shadow: 2px 2px 5px #00568D;
+ color: #fff;
+ word-wrap: normal;
+}
+.transparent .list-element .center-wrapper .panel-col-first h1 {
+ color: #fff;
+ font-size: 3.2em;
+ width: 100%;
+}
+.page-insolvency .list-element .center-wrapper .panel-col-first {
+ padding: 0 1.4em;
+}
+.list-element .field-name-body, 
+.pane-announcements .field-name-body {
+ font-size: 88%;
+}
+.list-element h2 {
+ width: 84%;
+ font-size: 180%;
+}
+.list-element h2,
+.list-element .field-name-field-read-more .field-item a {
+ color: #00568D;
+}
+.page-insolvency .list-element h1 {
+ font-size: 1.6em !important;
+ margin: 1em 0 0.4em 0;
+}
+.page-insolvency .list-element h1, 
+.page-insolvency .list-element .field-name-field-read-more .field-item a {
+ color: #7B2972;
+}
+.list-element .field-name-field-read-more .field-item {
+ background-color: #fff;
+ padding: 1em 2em 1em 1em;
+ margin: 0 10px 10px;
+}
+.list-element .field-name-field-read-more .field-item a::after {
+ content: '\f105';
+ font-family: 'FontAwesome';
+ font-size: 1.7em;
+ margin-top: -0.4em;
+ margin-right: -0.5em;
+ float: right;
+}
+.page-insolvency .list-element .field-item {
+ font-size: 1.33em;
+}
+.page-insolvency .list-element .field-item p {
+ font-size: 90%;
+}
+.page-insolvency .list-element .field-items {
+ padding-top: 0;
+}
+.slide img {
+ position: absolute;
+ width: 100%;
+ top: 0;
+ left: 0;
+ height: 100%;
+}
+.slide {
+ width: 100%;
+ overflow: hidden;
+ line-height: 1.4;
+ position: relative;
+ min-height: 22em;
+ background-color: #00568D;
+ padding: 0 2.3%;
+ margin-left: -2%;
+}
+.page-insolvency .slide {
+ background-color: #7B2972;
+}
+.panels-flexible-36 {
+ margin-top: -1.5em;
+}
+/* Optional width class to specify elements on large desktop display. */
+.full-width {
+ width: 98%;
+}
+.half-width {
+ width: 44.4%;
+}
+.third-width {
+ width: 32.4%;
+}
+.quarter-width {
+ width: 24.5%;
+}
+.full-width select,
+.half-width select,
+.third-width select,
+.quarter-width select {
+ max-width: 70%;
+}
+body:before {
+ display: none;
+}
+
+/* Table of content styles full width */
+div.toc-filter {
+ width: 36%;
+ float: right;
+ margin-right: -50%;
+}
+div.toc-filter.fix {
+ position: fixed !important;
+ top: 1em !important;
+ right: 1em !important;
+ margin: 0 !important;
+}
+div.toc-filter-content {
+ border-top: 5px solid #00568C;
+ border-bottom: none;
+ border-right: none;
+ border-left: none;
+}
+div.toc-filter .item-list > h3 {
+ color: #00568C;
+ font-size: 1.3em;
+}
+.toc-filter-content li {
+ list-style: none;
+ margin-left: -0.7em;
+ font-size: 0.9em;
+}
+div.toc-filter-content a {
+ padding: 0.3em 0;
+ display: block;
+}
+div.toc-filter-content a::before {
+ content: '\f054 ';
+ font-family: 'FontAwesome';
+ margin: 0 0.5em 0 -1em;
+}
+[class*="section-"] .views-row {
+ border-top: 6px solid #00568D;
+}
+.section-insolvency .pane-views-panes {
+ border-top: 6px solid #7b2972;
+}
+[class*="section-"] .views-row, 
+.page-insolvency .pane-views-panes {
+ background-color: #ECEDEE;
+ min-height: 9em;
+ float: left;
+ width: 28%;
+ margin: 0.5em 0.5em 0.5em 0;
+ padding: 1em;
+ display: block;
+ overflow: hidden;
+}
+/* Section and glossary page */
+.region-highlighted .view-announcements li.views-row {
+ width: 100%;
+ border: 0 none;
+ background-color: #000;
+ color: #FFF;
+ min-height: auto;
+ margin: -3.1em 1em -0.6em -3.2em;
+ font-size: 90%;
+ padding: 0.5em 2.2em;
+}
+.section-glossary .views-row {
+ width: 100%;
+ min-height: auto;
+}
+.view-glossary-listing ul {
+ padding: 0;
+}
+.view-glossary-listing .views-field-body {
+ padding-top: 1em;
+}
+.section-insolvency .views-row {
+ float: none;
+ width: auto;
+ margin: 0;
+ padding: 0;
+ border: 0;
+ min-height: auto !important;
+}
+.page-taxonomy-term-886 .views-row {
+ width: 44%;
+ background-color: transparent;
+ clear: none !important;
+ border: 1px solid #CCC;
+ border-top: 6px solid #00568D;
+}
+[class*="section-"] .views-row-4, 
+[class*="section-"] .views-row-7, 
+[class*="section-"] .views-row-10, 
+[class*="section-"] .views-row-13, 
+[class*="section-"] .views-row-16, 
+[class*="section-"] .views-row-19, 
+[class*="section-"] .views-row-22, 
+[class*="section-"] .views-row-25 {
+ clear: left;
+}
+/* Creditor meeting */
+.node-type-creditor-meeting .group-left, 
+.node-type-creditor-meeting .group-right {
+ border: 1px solid #CCC;
+ max-width: 44%;
+ padding: 0 1.5em 1em;
+ font-size: 90%;
+ margin: 1em auto;
+ min-height: 15em;
+}
+.node-type-creditor-meeting h2 {
+ color: #00568D;
+ margin-bottom: 0.4em;
+}
+/**
+ * For  desktop view above 1500px.
+ */
+@media all and (min-width: 1500px) {
+ #header, 
+ #content, 
+ #navigation, 
+ #footer {
+  padding: 0 20%;
+ }
+ .region-bottom .block {
+  width: 57%;
+ }
+ .pane-announcements {
+  padding: 0.5em 34.4%;
+  margin-left: -34.4%;
+ }
+ .slide {
+  padding: 0 37.2%;
+  margin-left: -40%;
+ }
+ .list-element .center-wrapper .panel-col-first,
+ .page-insolvency .list-element .center-wrapper .panel-col-last {
+  width: 34%;
+ }
+ .front .list-element .center-wrapper .panel-col-last {
+  width: 40%;
+ }
+ .region-highlighted .view-announcements li.views-row {
+  padding: 0.4em 36% 0.4em 38%;
+  margin: -3em 0 0.5em -40%;
+ }
+ /* Span 1 column, starting in 1st column from left. */
+ .sidebar-first .region-sidebar-first {
+  left: 20%;
+ }
+ #navigation .menu li ul, 
+ #navigation .menu li > ul, 
+ #navigation .sf-menu li.sfHover ul {
+  padding: 0 33.4% 0 38%;
+  margin-left: -38%;
+ }
+}
+
+/**
+ * For normal desktop view below 1500px.
+ */
+@media all and (min-width: 960px) and (max-width: 1499px) {
+ #header, 
+ #content, 
+ #navigation, 
+ #footer {
+  padding: 0 10%;
+ }
+ .region-bottom .block {
+  width: 77%;
+ }
+ .pane-announcements {
+  padding: 0.5em 13.4%;
+  margin-left: -13.4%;
+ }
+ .slide {
+  padding: 0 16.2%;
+  margin-left: -19%;
+ }
+ .region-highlighted .view-announcements li.views-row {
+  padding: 0.4em 15% 0.4em 28%;
+  margin: -3em 0 0 -30%;
+ }
+ .page-insolvency .panels-flexible-36 {
+  margin-top: -1.4em;
+ }
+ /* Span 1 column, starting in 1st column from left. */
+ .sidebar-first .region-sidebar-first {
+ left: 10%;
+ }
+  #navigation .menu li ul, 
+  #navigation .menu li > ul, 
+  #navigation .sf-menu li.sfHover ul {
+  padding: 0 12.4% 0 14%;
+  margin-left: -14%;
+  height: 3.4em;
+ }
+}
+
+/**
+ * Use 3 grid columns for smaller screens.
+ */
+@media all and (min-width: 480px) and (max-width: 959px) {
+ body:before {
+  content: 'tablet';
+ }
+ #header {
+  padding: 0 2em 0 2.5em;
+ }
+ .pane-announcements {
+  padding: 0.5em 1.55em 0.5em 0.7em;
+  margin-left: -1em;
+ }
+ article,
+ .page-glossary .view-content .item-list, 
+ .ds-1col.node-creditor-meeting {
+  width: 100%;
+  }
+ #navigation .menu li ul, 
+ #navigation .menu li > ul, 
+ #navigation .sf-menu li.sfHover ul {
+  margin-left: -1.3em;
+  font-size: 0.85em;
+  height: 3.4em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 1.3em;
+ }
+/* Creditor meeting */
+ .node-type-creditor-meeting .group-left, 
+ .node-type-creditor-meeting .group-right {
+  max-width: 40%;
+ }
+/** Blocks for standard landing page. */
+ .list-element .center-wrapper {
+  width: 87%;
+ }
+/** Blocks for standard landing page. */
+ .page-insolvency .pane-views-panes, 
+  [class*="section-"] .views-row {
+  width: 40%;
+  clear: none;
+ }
+ .section-insolvency .views-row {
+  width: auto;
+ }
+ .section-glossary .views-row,
+ .view-careers .views-row {
+  width: 90%;
+ }
+/* Landing pages quicktabs on tablet display. */
+ #quicktabs-container-view__level_1_landing_page__default {
+  width: 40%;
+ }
+/**
+* The layout when there is only one sidebar, the left one.
+*/
+  /* Span 2 columns, starting in 2nd column from left. */
+ .sidebar-first #content {
+  float: left;
+  width: 66.66667%;
+  margin-left: 33.33333%;
+  margin-right: -100%;
+ }
+
+  /* Span 1 column, starting in 1st column from left. */
+ .sidebar-first .region-sidebar-first {
+  float: left;
+  width: 33.33333%;
+  margin-left: 0%;
+  margin-right: -33.33333%;
+ }
+
+  /**
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  /* Span 2 columns, starting in 1st column from left. */
+ .sidebar-second #content {
+  float: left;
+  width: 66.66667%;
+  margin-left: 0%;
+  margin-right: -66.66667%;
+ }
+
+  /* Span 1 column, starting in 3rd column from left. */
+ .sidebar-second .region-sidebar-second {
+  float: left;
+  width: 33.33333%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+ }
+
+  /**
+   * The layout when there are two sidebars.
+   */
+
+  /* Span 2 columns, starting in 2nd column from left. */
+ .two-sidebars #content {
+  float: left;
+  width: 66.66667%;
+  margin-left: 33.33333%;
+  margin-right: -100%;
+ }
+
+  /* Span 1 column, starting in 1st column from left. */
+ .two-sidebars .region-sidebar-first {
+  float: left;
+  width: 33.33333%;
+  margin-left: 0%;
+  margin-right: -33.33333%;
+ }
+
+  /* Start a new row and span all 3 columns. */
+ .two-sidebars .region-sidebar-second {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 0;
+  padding-right: 0;
+  clear: left;
+ }
+
+  /* Apply the shared properties of grid items in a single, efficient ruleset. */
+ .two-sidebars .region-sidebar-second .block {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/path/to/boxsizing.htc");
+  _display: inline;
+  _overflow: hidden;
+  _overflow-y: visible;
+ }
+
+  /* Span 1 column, starting in the 1st column from left. */
+ .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
+  float: left;
+  width: 33.33333%;
+  margin-left: 0%;
+  margin-right: -33.33333%;
+  clear: left;
+ }
+
+  /* Span 1 column, starting in the 2nd column from left. */
+ .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
+  float: left;
+  width: 33.33333%;
+  margin-left: 33.33333%;
+  margin-right: -66.66667%;
+ }
+
+  /* Span 1 column, starting in the 3rd column from left. */
+ .two-sidebars .region-sidebar-second .block:nth-child(3n) {
+  float: left;
+  width: 33.33333%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+ }
+}
+
+/**
+ * Use 5 grid columns for larger desktop screens.
+ */
+@media all and (min-width: 960px) {
+ body:before {
+  content: 'desktop';
+ }
+
+ /**
+  * The layout when there is only one sidebar, the left one.
+  */
+ /* Span 4 columns, starting in 2nd column from left. */
+ .sidebar-first #content {
+ float: left;
+ width: 80%;
+ margin-left: 20%;
+ }
+
+ /* Span 1 column, starting in 1st column from left. */
+ .sidebar-first .region-sidebar-first {
+ float: left;
+ width: 20%;
+ position: absolute;
+ top: 5em;
+ }
+
+ /**
+  * The layout when there is only one sidebar, the right one.
+  */
+
+ /* Span 4 columns, starting in 1st column from left. */
+ .sidebar-second #content {
+  float: left;
+  width: 80%;
+  margin-left: 0%;
+  margin-right: -80%;
+ }
+
+ /* Span 1 column, starting in 5th column from left. */
+ .sidebar-second .region-sidebar-second {
+  float: left;
+  width: 20%;
+  margin-left: 80%;
+  margin-right: -100%;
+ }
+
+ /**
+  * The layout when there are two sidebars.
+  */
+
+ /* Span 3 columns, starting in 2nd column from left. */
+ .two-sidebars #content {
+  float: left;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: -80%;
+ }
+
+ /* Span 1 column, starting in 1st column from left. */
+ .two-sidebars .region-sidebar-first {
+  float: left;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: -20%;
+ }
+
+ /* Span 1 column, starting in 5th column from left. */
+
+ .two-sidebars .region-sidebar-second {
+  float: left;
+  width: 20%;
+  margin-left: 80%;
+  margin-right: -100%;
+ }
+}
+
+/* Navigation bar */
+@media all and (min-width: 480px) {
+ #main {
+  /* Move all the children of #main down to make room. */
+  padding-top: 3em;
+  position: relative;
+ }
+/** For standard landing page within sections. */
+ [class*="section-"] #main {
+  padding-top: 8em;
+ }
+ .section-you-are-currently-our-beta-website #main,
+ .ds-2col-fluid.node-creditor-meeting #main,
+  .section-search #main, 
+ .section-sitemap #main, 
+ .section-statistics #main,
+ .section-online-services #main,
+ .section-contact-us #main {
+  /* Move all the children of #main down to make room. */
+  padding-top: 4.6em;
+ }
+ #navigation {
+  /* Move the navbar up inside #main's padding. */
+  position: absolute;
+  top: 0;
+  width: 100%;
+ }
+ .mobile {
+  display: none;
+ }
+}
+/**
+ * Slide image background setting for different screen sizes.
+ */
+@media all and (min-width: 480px) and (max-width: 1499px) {
+ .list-element .center-wrapper .panel-col-first {
+  width: 40%;
+ }
+ .front .list-element .center-wrapper .panel-col-last {
+  float: right;
+  width: 49%;
+ }
+}
+@media all and (min-width: 960px) and (max-width: 1199px) {
+ .slide img {
+  top: -40%;
+  height: auto;
+ }
+}
+@media all and (min-width: 1200px) {
+ .slide img {
+  top: -90%;
+  height: auto;
+ }
+}
+/**
+ * Use for mobile smaller screens.
+ */
+@media all and (max-width: 479px) {
+ body:before {
+  content: 'mobile';
+ }
+ .desktop,
+ .element-invisible, 
+ .element-focusable, 
+ #navigation .block-menu .block__title, 
+ #navigation .block-menu-block .block__title {
+  display: none;
+ }
+ #content, 
+ #navigation, 
+ #footer {
+  padding: 0 0.4em;
+ }
+/* Announcement notices */
+ .pane-announcements,
+ .region-highlighted .view-announcements li.views-row {
+  display: inline-block;
+ }
+ .pane-announcements .item-list::before {
+  position: absolute;
+  right: 25%;
+  font-size: 64px;
+ }
+ .region-highlighted .view-announcements li.views-row {
+  margin-top: -1em;
+ }
+ .page-insolvency .region-highlighted .view-announcements li.views-row {
+  margin-bottom: -2em;
+ }
+ 
+/* Slideshow landing page block */
+ .slide {
+  padding: 0;
+  margin-left: 0;
+  margin-top: 0.3em;
+ }
+ .page-insolvency .slide {
+  width: 113%;
+  margin-left: -6%;
+ }
+ .list-element .center-wrapper {
+  top: 1em;
+  position: relative;
+  width: 94%;
+ }
+ .list-element .center-wrapper .panel-col-first {
+  min-height: auto;
+ }
+ .transparent .list-element .center-wrapper .panel-col-first h2 {
+  margin-top: 0;
+  text-align: center;
+ }
+ .list-element {
+  font-size: 84%
+ }
+ .list-element h2 {
+  width: 100%;
+ }
+ .list-element .field-name-field-read-more .field-item {
+  width: 100%;
+  margin: 0.4em 0 0.4em -0.5em;
+  padding: 10px 1.5em 10px 1em;
+ }
+ .page-insolvency .list-element .field-name-field-read-more .field-item {
+  padding: 10px 2em 10px 1em;
+ }
+ article,
+ .page-glossary .view-content .item-list,
+ .ds-1col.node-creditor-meeting {
+  width: 100%;
+ }
+/* Creditor meeting */
+ .node-type-creditor-meeting .group-left, 
+ .node-type-creditor-meeting .group-right {
+  min-height: auto;
+ }
+  /** Blocks for standard landing page. */
+ [class*="section-"] #main {
+  padding: 1em;
+ }
+ [class*="section-"] .views-row,
+ .page-insolvency .pane-views-panes {
+  width: 92%;
+  min-height: 3em;
+ }
+ .view-careers .views-row {
+  margin-left: -1em;
+ }
+/* Landing pages quicktabs on mobile display. */
+ #quicktabs-container-multilingual_resources, 
+ #quicktabs-container-view__level_1_landing_page__default {
+  position: relative;
+  left: 0;
+  clear: left;
+  padding-top: 1em;
+  width: auto;
+ }
+ #quicktabs-multilingual_resources ul.quicktabs-tabs li {
+  float: left;
+  width: 33%;
+  border: 1px dotted #FFF;
+ }
+ #quicktabs-multilingual_resources .item-list,
+ #quicktabs-view__level_1_landing_page__default .item-list {
+  width: 100%;
+ }
+ #quicktabs-multilingual_resources ul.quicktabs-tabs li.active a::after {
+  content: "\f078";
+  margin-top: 0;
+  margin-right: 1.4em;
+  font-size: 13px;
+  color: #FFF;  
+ }
+ #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active a::after {
+  content: "\f078";
+  margin-top: 0;
+  margin-right: 0;
+  font-size: 1em;
+  color: #FFF;
+  position: relative;
+  float: right;
+ }
+ /* Footer blocks*/
+ #footer .block ul {
+  margin: 0 1.5em 0.5em;
+ }
+ #footer .block {
+  width: 90%;
+  clear: both;
+ }
+ #footer .block:first-child {
+  margin-top: 1.5em;
+ }
+ #footer .block:last-child,
+ #footer .block:last-child a  {
+  position: absolute;
+  right: 1em;
+ }
+ /* Header */
+ #header { 
+  margin: 3.2em 0 0;
+  width: 101%;
+  float: right;
+ }
+ /* Hide/Show mobile content */
+ .mobile {
+  display: block;
+ }
+ .desktop {
+  display: none;
+ }
+ /* Region bottom */
+ .region-bottom {
+  min-height: 7em;
+ }
+ /* Region header */
+ .region-header .block {
+  float: none;
+  text-align: center;
+  word-wrap: normal;
+ }
+ /* Region header - Search block */
+ .region-header .search-form-widget {
+  position: fixed;
+  top: 3.3em;
+  z-index: 101;
+  right: 0;
+  background-color: #004B79;
+  width: 94%;
+  display: none;
+ }
+ .region-header .form-text {
+  width: 70%;
+  padding: 0.4em;
+ }
+ .region-header .form-type-textfield::after {
+  color: #FFF;
+  float: none;
+ }
+ .region-header .search-form-widget input[type="submit"] {
+  right: 3em;
+  width: 4.6em;
+  z-index: 100;
+  position: absolute;
+ }
+ .mobile.search-btn {
+  position: fixed;
+  top: 0;
+  z-index: 199;
+  right: 0;
+  color: #FFF;
+  font-size: 0.75em;
+  height: 4em;
+  padding-top: 0.5em;
+ }
+ .search-btn .fa-search {
+  font-size: 1.6em;
+  width: 100%;
+  margin-top: 0.35em;
+}
+/* Languages and Services block */
+ .languages {   
+  position: fixed;
+  top: -1px;
+  z-index: 105;
+  right: 150px;
+  width: 80px;
+ }
+ .online-services { 
+  position: fixed;
+  top: 0;
+  z-index: 104;
+  right: 70px;
+  font-size: 0.8em;
+  width: 80px;
+ }
+ .languages .atcb-link, 
+ .languages .atcb-link:hover, 
+ .languages .atcb-link:active, 
+ .languages .atcb-link:focus, 
+ .online-services .atcb-link, 
+ .online-services .atcb-link:hover, 
+ .online-services .atcb-link:active, 
+ .online-services .atcb-link:focus {
+  background: transparent none repeat scroll 0% 0% !important;
+  box-shadow: none;
+  height: 2.5em;
+  overflow: hidden;
+  line-height: 1.4;
+ }
+ .online-services .fa-user,
+ .languages .fa-globe {
+  font-size: 20px;
+  margin-top: 4px;
+  width: 100%;
+ }
+ .online-services a.atcb-link {
+  color: #FFF;
+  min-width: 40px;
+ }
+ .online-services .atcb-list,
+ .languages .atcb-list {
+  margin-left: -65%;
+ }
+ a.contactus .fa {
+  font-size: 20px;
+  margin-top: 4px;
+  width: 100%;
+ }
+ a.contactus { 
+  padding-top: 0;
+  text-align: center; 
+  position: fixed;
+  top: 0;
+  right: 250px;
+  z-index: 105;}
+ /* Navigation bar */
+ #navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00568d;
+  height: 3.4em;
+  z-index: 98;
+ }
+ #navigation a {
+  color:#FFF;
+ }
+ #navigation .links li,
+ #navigation .menu li {
+  clear: left;
+  background-color: #EAEAEA;
+  width: 80%;
+ }
+ .sf-menu.menu li.sf-depth-1:after {
+  display: none;
+ }
+ #navigation .menu li.first.sf-depth-1 a {
+  text-indent: 0 !important;
+ }
+ .region-navigation {
+  position: relative;
+  padding-left: 1em;
+  width: 60px;
+ }
+ .region-navigation::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0.6em;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #FFFFFF;
+  border-bottom: 0.125em solid #FFFFFF;
+  font-size: 1.5em;
+ }
+ #block-superfish-1 {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  padding-top: 3em !important;
+  height: 0;
+  overflow: hidden;
+  z-index: 99;
+ }
+ #block-superfish-1 #superfish-1 {
+  position: absolute;
+  width: 300px;
+ }
+ #block-superfish-1::after {
+  content: "Menu";
+  position: fixed;
+  top: 34px;
+  z-index: 400;
+  color: #FFF;
+  left: 10px;
+  font-size: 70%;
+ }
+ #block-superfish-1:hover,
+ #block-superfish-1:focus {
+  cursor: pointer;
+  overflow: visible;
+ }
+ #navigation .links li > ul li,
+ #navigation .menu li > ul li,
+ div.toc-filter, 
+ div.toc-filter-bullet, 
+ div.toc-filter-number, 
+ div.toc-filter-faq, 
+ .toc-filter-back-to-top {
+  display: none;
+ }
+ .group-left,
+ .group-right,
+ .panels-flexible-region,
+ .contextual-links-region,
+ .panels-flexible-region-inside,
+ .panel-panel,
+ .full-width,
+ .half-width,
+ .third-width,
+ .quarter-width {
+  min-width: 90%;
+  padding: 0;
+  float: left !important;
+ }
+ .front .panels-flexible-region-1-top_right,
+ .front .panels-flexible-region-1-top_left {
+  float: left;
+  margin-top: 0.5em;
+  width: 93%;
+ }
+/* Feedback form elements. */
+ #webform-client-form-10041 .form-actions, 
+ #webform-client-form-1 .form-actions {
+  float: none;
+  text-align: right;
+  margin: 1em;
+ }
+ #edit-submitted-was-this-information-helpful-options {
+  width: 100%;
+ }
+ .environ {
+  position: fixed;
+ }
+}
+/* Responsive code for Youtube video */
+.video-filter {
+ position: relative;
+ padding-bottom: 56.25%;
+ height: 0;
+ overflow: hidden;
+}
+.video-filter iframe,
+.video-filter object,
+.video-filter embed {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}

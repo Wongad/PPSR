@@ -1,0 +1,144 @@
+/**
+ * @file
+ * Print styling
+ *
+ * We provide some sane print styling for Drupal using Zen's layout method.
+ */
+
+/**
+ * By importing this CSS file as media "all", we allow this print file to be
+ * aggregated with other stylesheets, for improved front-end performance.
+ */
+@media print {
+  [class*='section-'] #main {
+    padding-top: 0.5em;
+  }
+
+  /* Underline all links. */
+  a:link,
+  a:visited {
+    text-decoration: underline !important;
+  }
+
+  /* Don't underline header. */
+  a:link.header__site-link,
+  a:visited.header__site-link {
+    text-decoration: none !important;
+  }
+
+  /* Add visible URL after links. */
+  #content a[href]:after {
+    content: " ("attr(href)")";
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  /* Only display useful links. */
+  .quicktabs-tabs li a:after,
+  #content a[href^="javascript:"]:after,
+  #content a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Add visible title after abbreviations. */
+  #content abbr[title]:after {
+    content: " ("attr(title)")";
+  }
+
+  /* Un-float the content. */
+  #content {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Turn off any background colors or images. */
+  body,
+  #page,
+  #main,
+  #content,
+  .region-bottom,
+  .pane-announcements,
+  .pane-announcements h2,
+  .pane-announcements a,
+  .region-highlighted .view-announcements li.views-row,
+  .region-highlighted .view-announcements li.views-row h2,
+  .region-highlighted .view-announcements li.views-row a,
+  #quicktabs-multilingual_resources ul.quicktabs-tabs li,
+  #quicktabs-multilingual_resources ul.quicktabs-tabs li.active,
+  #quicktabs-multilingual_resources ul.quicktabs-tabs li.active a, 
+  #quicktabs-multilingual_resources ul.quicktabs-tabs li.active a:after, 
+  #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li,
+  #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active,
+  #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active a,
+  #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active a:after {
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+  #page-title {
+    width: 99%;
+    border-top: 2px dotted #333;
+    color: #000;
+  }
+  .region-bottom {
+    border-top: 2px dotted #333;
+    border-bottom: 2px dotted #333;
+    bottom: 2em;
+    width: 96%;
+  }
+  .grey-btn,
+  .blue-btn,
+  #quicktabs-multilingual_resources ul.quicktabs-tabs li.active,
+  #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active {
+    border: 1px solid #333;
+  }
+  
+  /* Hide sidebars and nav elements. */
+  #block-webform-client-block-1,
+  #header,
+  #footer,
+  .close-window,
+  #skip-link,
+  #toolbar,
+  #navigation,
+  #search-api-page-search-form-acquia-search-page,
+  .online-services,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  #footer,
+  .breadcrumb,
+  .tabs,
+  .action-links,
+  .links,
+  .book-navigation,
+  .forum-topic-navigation,
+  .pager,
+  .feed-icons, 
+  #quicktabs-multilingual_resources ul.quicktabs-tabs li a, 
+  #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li a,
+  .views-exposed-form,
+  .js__scroll_top {
+    visibility: hidden;
+    display: none;
+  }
+  
+  /* Display elements for print. */ 
+  .print,
+  #quicktabs-multilingual_resources ul.quicktabs-tabs li.active a, 
+  #quicktabs-view__level_1_landing_page__default ul.quicktabs-tabs li.active a {
+    display: block;
+    visibility: visible;
+    text-decoration: none !important;
+  }
+  [class*="section-"] .views-row, 
+  .page-insolvency .pane-views-panes {
+    width: 92%;
+    min-height: auto;
+  }
+  img.print {
+    margin-top: -2.5em;
+    margin-bottom: 2em;
+  }
+}
