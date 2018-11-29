@@ -1,0 +1,42 @@
+
+/////////////
+// COLORS
+////////////
+
+//green
+$green--main: #006171;
+$green--dim: #125361;
+
+//grey
+$grey--pale: #EAF0F3;
+$grey--mid: #979797;
+$grey--dark: #454B56;
+
+
+////////////
+// FONTS
+////////////
+
+$font--standard-old: Arial, Helvetica, sans-serif;
+$font--standard: 'Roboto', sans-serif;
+
+$font--condensed-old: Oswald, Arial, Helvetica, sans-serif;
+$font--condensed: 'Roboto Condensed', sans-serif;
+
+$font--code: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+/////////////////
+// BREAK POINTS
+////////////////
+$BP-tablet: 976px;
+$BP-mobile: 800px;
+$BP-small: 500px;
+
+/////////////
+// MIXINS
+////////////
+
+// mq-scss
+// loaded from node_modules folder
+// documentation: https://www.npmjs.com/package/mq-scss
+@import 'mq-scss/mq';

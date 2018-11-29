@@ -1,0 +1,1066 @@
+
+@import './variables-and-tools.scss';
+
+/**
+ * @file
+ * Normalize.css is intended to be used as an alternative to CSS resets.
+ *
+ * This file is a slight fork of these original sources:
+ * - normalize.css v2.1.2 | MIT License | git.io/normalize
+ * - normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-with-compass
+ *
+ * It's suggested that you read the normalize.scss file and customise it to meet
+ * your needs, rather then including the file in your project and overriding the
+ * defaults later in your CSS.
+ * @see http://nicolasgallagher.com/about-normalize-css/
+ *
+ * Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+ *       @see http://snook.ca/archives/html_and_css/no_css_reset/
+ */
+
+/**
+ * HTML5 display definitions
+ */
+
+/* Correct `block` display not defined in IE 8/9. */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* Correct `inline-block` display not defined in IE 8/9. */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* Address styling not present in IE 8/9. */
+[hidden] {
+  display: none;
+}
+
+/**
+ * Base
+ *
+ * Instead of relying on the fonts that are available on a user's computer, you
+ * can use web fonts which, like images, are resources downloaded to the user's
+ * browser. Because of the bandwidth and rendering resources required, web fonts
+ * should be used with care.
+ *
+ * Numerous resources for web fonts can be found on Google. Here are a few
+ * websites where you can find Open Source fonts to download:
+ * - http://www.fontsquirrel.com/fontface
+ * - http://www.theleagueofmoveabletype.com
+ *
+ * In order to use these fonts, you will need to convert them into formats
+ * suitable for web fonts. We recommend the free-to-use Font Squirrel's
+ * Font-Face Generator:
+ *   http://www.fontsquirrel.com/fontface/generator
+ *
+ * The following is an example @font-face declaration. This font can then be
+ * used in any ruleset using a property like this:  font-family: Example, serif;
+ */
+
+/*
+@font-face {
+  font-family: 'Example';
+  src: url('../fonts/example.eot');
+  src: url('../fonts/example.eot?iefix') format('eot'),
+    url('../fonts/example.woff') format('woff'),
+    url('../fonts/example.ttf') format('truetype'),
+    url('../fonts/example.svg#webfontOkOndcij') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v10/HqHm7BVC_nzzTui2lzQTDVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v10/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v10/bH7276GfdCjMjApa_dkG6VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+
+//Google fonts Roboto & Roboto condensed (normal, normal italic, bold and bold italic for both)
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i|Roboto:400,400i,700,700i');
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ */
+html {
+  font-family: $font--standard-old; /* 1 */
+  /* Delete all but one of the following font-size declarations: */
+
+  /* Use a 12px base font size. 16px x 75% = 12px */
+  font-size: 75%; /* 3 */
+  /* Use a 14px base font size. 16px x .875 = 14px */
+  font-size: 87.5%; /* 3 */
+  /* Use a 16px base font size. */
+  font-size: 100%; /* 3 */
+  -ms-text-size-adjust: 100%;     /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  /* Establish a vertical rhythm. */
+  line-height: 1.2;
+}
+
+/* Address `font-family` inconsistency between `textarea` and other form elements. */
+button,
+input,
+select,
+textarea {
+  /**
+   * The following font family declarations are available on most computers.
+   *
+   * A user's web browser will look at the comma-separated list and will
+   * attempt to use each font in turn until it finds one that is available
+   * on the user's computer. The final "generic" font (sans-serif, serif or
+   * monospace) hints at what type of font to use if the web browser doesn't
+   * find any of the fonts in the list.
+   *
+   * font-family: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+   * font-family: Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+   * font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
+   *
+   * font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+   * font-family: Tahoma, Verdana, "DejaVu Sans", sans-serif;
+   * font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+   *
+   * font-family: "Courier New", "DejaVu Sans Mono", monospace;
+   */
+  font-family: $font--standard-old;
+}
+input[type="checkbox"], input[type="radio"],
+button,
+input,
+select,
+textarea {
+  color: #444444;
+}
+
+/* Remove default margin. */
+body {
+  margin: 0;
+  padding: 0;
+}
+.ui-widget {
+  font-family: $font--standard-old;
+  font-size: 1em;
+}
+/**
+ * Links
+ *
+ * The order of link states are based on Eric Meyer's article:
+ * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+ */
+a:link,
+a:active {
+  color: #00545F;
+  background-color: transparent;
+}
+a:visited {
+  color: #551A8B;
+  background-color: transparent;
+}
+a:hover,
+a:focus {
+  color: #00545F;
+  background-color: #E9F1F3;
+}
+
+/* Address `outline` inconsistency between Chrome and other browsers. */
+a:focus {
+  outline: thin dotted;
+}
+
+/* Improve readability when focused and also mouse hovered in all browsers. */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Include document image icons for links. */
+.file .file-icon {
+  display: none;
+}
+a[href$='.pdf'], a[href$='.PDF'],
+a[type^='application/pdf'] {
+  padding-left: 1.2em;
+  background: transparent url("/modules/file/icons/application-pdf.png") no-repeat scroll left center !important;
+}
+a[href$='.xls'], a[href$='.XLS'],
+a[href$='.xlsx'], a[href$='.XLSX'],
+a[type^='application/vnd'] {
+  padding-left: 1.2em;
+  background: transparent url("/modules/file/icons/x-office-spreadsheet.png") no-repeat scroll left center;
+}
+a[href$='.doc'], a[href$='.DOC'],
+a[href$='.docx'], a[href$='.DOCX'],
+a[href$='.txt'], a[href$='.TXT'],
+a[href$='.rtf'], a[href$='.RTF'],
+a[type^='application/msword'] {
+  padding-left: 1.2em;
+  background: transparent url("/modules/file/icons/x-office-document.png") no-repeat scroll left center !important;
+}
+a[href$='.xsd'], a[href$='.XSD'],
+a[href$='.xml'], a[href$='.XML'] {
+  padding-left: 1.2em;
+  background: transparent url("/modules/file/icons/text-x-script.png") no-repeat scroll left center;
+}
+a[href$='.zip'], a[href$='.ZIP'],
+a[href$='.zipx'], a[href$='.ZIPX'],
+a[type^='application/zip'] {
+  padding-left: 1.2em;
+  background: transparent url("/modules/file/icons/package-x-generic.png") no-repeat scroll left center;
+}
+.field-name-body a[href$='.mp4'], .field-name-body a[href$='.mov'], .field-name-body a[href$='.avi'],
+.field-name-body a[href$='.MP4'], .field-name-body a[href$='.MOV'], .field-name-body a[href$='.AVI'] {
+  padding-left: 1.2em;
+  background: transparent url("/modules/file/icons/video-x-generic.png") no-repeat scroll left center;
+}
+/**
+ * Typography
+ *
+ * To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+ * so that the line height of our base font becomes the basic unit of vertical
+ * measurement. We use multiples of that unit to set the top and bottom margins
+ * for our block level elements and to set the line heights of any fonts.
+ * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
+ */
+
+blockquote {
+  /* Also indent the quote on both sides. */
+  margin: 0 1.5em;
+}
+.region-header, .block-title, .pane-block h2,
+.rs-slideshow,.home-summary h2, .pane-views h2,
+.pane-latest-news h2, #navigation, .menu-block-wrapper,
+.region-bottom, .item-list h3 {
+  font-family: $font--condensed-old;
+}
+.home-summary h2, .pane-views h2, .pane-block h2, .pane-latest-news h2,
+.home-summary h2 a, .pane-views h2 a, .pane-block h2 a {
+  font-weight: 400;
+}
+#navigation {
+  font-weight: 300;
+  font-size: 1.4em;
+}
+.menu-block-wrapper {
+  font-weight: 300;
+  font-size: 1.2em;
+}
+.node-title {
+  font-family: $font--standard-old;
+}
+.pane-latest-news p {
+  font-size: 0.8em;
+  margin: 0.5em 0;
+}
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1, h1 a {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.5; /* 3rem / 2em = 1.5em */
+}
+h2, h2 a {
+  font-size: 1.24em;
+  line-height: 1.5; /* 3rem / 1.5em = 2em */
+}
+h3, h3 a {
+  font-size: 1.17em;
+  line-height: 1.1; /* 1.5rem / 1.17em = 1.28205em */
+}
+h4, h4 a {
+  font-size: 1em;
+  line-height: 1.1; /* 1.5rem / 1em = 1.5em */
+}
+h5, h5 a {
+  font-size: 0.83em;
+  line-height: 1.2; /* 1.5rem / 0.83em = 1.80723em */
+}
+h6, h6 a {
+  font-size: 0.67em;
+  line-height: 1.3; /* 1.5rem / 0.67em = 2.23881em */
+}
+/* standard font sizes for reuse. */
+.halfEM {
+  font-size: 0.5em;
+}
+.oneEM {
+  font-size: 1em;
+}
+.onehalfEM {
+  font-size: 1.5em;
+}
+.twoEM {
+  font-size: 2em;
+}
+.twohalfEM {
+  font-size: 2.5em;
+}
+/* Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong {
+  font-weight: bold;
+}
+
+/* Address styling not present in Safari 5 and Chrome. */
+dfn {
+  font-style: italic;
+}
+
+/* Address differences between Firefox and other browsers. */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  border: 1px solid #666;
+  margin: 1.5em 0;
+}
+
+/* Address styling not present in IE 8/9. */
+mark {
+  background: #FFFF00;
+  color: #000000;
+}
+
+/* Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp, tt, var {
+  font-family: $font--code;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* Improve readability of pre-formatted text in all browsers. */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Set consistent quote types. */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* Address inconsistent and variable font size in all browsers. */
+small, .small {
+  font-size: 70%;
+}
+
+/* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/**
+ * Lists
+ */
+dl,
+menu,
+ol,
+ul {
+  /* Address margins set differently in IE 6/7. */
+  margin: 1.5em 0;
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+}
+dd {
+  margin: 0 0 0 30px; 
+}
+
+/* Address paddings set differently in IE 6/7. */
+menu,
+ol,
+ul {
+  padding: 0 0 0 30px; /* LTR */
+}
+/* Correct list images handled incorrectly in IE 7. */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/**
+ * Embedded content and figures
+ *
+ * @todo Look into adding responsive embedded video.
+ */
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  /* Correct IE 8 not scaling image height when resized. */
+  width: auto;
+}
+
+/* Correct overflow displayed oddly in IE 9. */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Address margin not present in IE 8/9 and Safari 5. */
+figure {
+  margin: 0;
+}
+/**
+ * Forms
+ */
+
+/* Correct margin displayed oddly in IE 6/7. */
+form {
+  margin: 0;
+}
+
+/* Define consistent border, margin, and padding. */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 1em 0.5em;
+  padding: 0.5em 0.625em 1em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  padding: 0;
+  font-size: 140%;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%; 
+  margin: 0; 
+  vertical-align: baseline;
+  max-width: 100%; 
+  box-sizing: border-box;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+
+button,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; 
+  cursor: pointer;
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+/* Drupal-style form labels. */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+/**
+ * Tables
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  /* Add vertical rhythm margins. */
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+table td, table th {
+  vertical-align: top;
+}
+table td p, table th p {
+  margin: 0 0 0.5em 0;
+}
+.views-view-grid td {
+  vertical-align: top;
+}
+.views-view-grid.cols-2 td {
+  width: 48.5%;
+}
+.views-view-grid.cols-3 td {
+  width: 32%;
+}
+.toc-header .toc-number {
+  display: none;
+}
+div.toc-filter-back-to-top a:link,
+div.toc-filter-back-to-top a:visited {
+  color: #FFFFFF;
+  background-color: #343942;
+  text-decoration: none;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+div.toc-filter-back-to-top a:hover,
+div.toc-filter-back-to-top a:focus {
+  background-color: #4E545E;
+  text-decoration: underline;
+}
+div.toc-filter-content {
+  background-color: #FFFFFF;
+  border: 1px solid #909090;
+  padding: 1em;
+}
+div.toc-filter-content ul, div.toc-filter-content ol {
+  list-style-position: inside;
+  padding: 0;
+}
+div.toc-filter-content ul{
+  list-style: none;
+}
+div.toc-filter-content li {
+  background: transparent url("../images/grey-chevron.png") no-repeat scroll right center;
+  border-bottom: 1px solid #909090;
+}
+div.toc-filter-content a {
+  color: #454B56;
+  padding: 0.5em 0px;
+  text-decoration: none;
+  display: inline-table;
+  width: 94%;
+}
+div.toc-filter-content a:hover,
+div.toc-filter-content a:focus {
+  text-decoration: underline;
+}
+div.toc-filter-content h3 {
+  width: 100%;
+  display: block;
+  border-bottom: 3px solid #909090;
+  margin: 0.5em 0;
+  color: #454B56;
+  font-weight: 400;
+}
+/**
+ * Admin menu
+ */
+a.contextual-links-trigger {
+    background: transparent url(/modules/contextual/images/gear-select.png) no-repeat 2px 0 !important;
+}
+ul.contextual-links li a {
+    display: block !important;
+    margin: 0.25em 0 !important;
+    padding: 0.25em 1em 0.25em 0.5em !important;
+    background-image: none !important;
+}
+ul.contextual-links li a:hover, ul.contextual-links li a:focus {
+    background-color: #E9F1F3 !important;
+}
+/**
+ * Pane Block, Pane Views
+ */
+.pane-block ul {
+  list-style: outside none none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.pane-block a, .pane-professionals a,
+.pane-business a, .pane-individuals a,
+.front .pane-latest-news a {
+  display: block;
+  color: $grey--dark;
+  text-decoration: none;
+  background: transparent url("../images/light-grey-chevron.png") no-repeat scroll right center;
+  padding-right: 0.6em;
+}
+#main .pane-block li a[href^="https://transact"],
+#main .pane-views li a[href^="https://transact"] {
+  background: transparent url("../images/register-icon-green.png") no-repeat scroll right center / 20px auto;
+}
+.field-name-body a[href^="https://transact"] {
+  padding-left: 1.2em;
+  background: transparent url("../images/register-icon-green.png") no-repeat scroll left center / 16px auto;
+}
+.pane-block h2 a, .pane-views h2 a,
+.front .pane-latest-news h2 a {
+  background: transparent url("../images/grey-chevron.png") no-repeat scroll right center;
+  padding-right: 0.3em;
+}
+.pane-block a:hover, .pane-views a:hover,
+.pane-block a:focus, .pane-views a:focus,
+.front .pane-latest-news a:hover, .front .pane-latest-news a:focus {
+  text-decoration: underline;
+}
+.mobile-s-show a.car-search,
+.mobile-s-show .car-search {
+  background-image: url("../images/car-search-icon-white.png") !important;
+  background-color: $green--main !important;
+  color: #FFFFFF;
+  background-size: 24px;
+}
+/* Homepage */
+.front .home-summary, .front .home-summary a,
+.region-header a[href^="https://transact"] {
+  color: #FFFFFF;
+}
+.front .center-wrapper .panel-col .pane-block li a,
+.front .center-wrapper .panel-col-last .pane-block li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+.front .center-wrapper .panel-col .pane-block li:first-child a,
+.front .center-wrapper .panel-col-last .pane-block li:first-child a{
+  color: #333333;
+}
+.page__title {
+  color: #454B56;
+}
+   /* Style left navigation layout */
+.sidebar-first .block-menu-block h2 {
+  font-size: 2.1em;
+  font-weight: 400;
+  color: #454B56;
+  margin-left: 0.4em;
+}
+/* Main menu and secondary menu links and menu block links. */
+#navigation,
+#navigation .links a,
+#navigation .menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/**
+ * Slideshow
+ */
+.rs-slideshow, .rslides_tabs a,
+.rs-slideshow a {
+  color: #FFFFFF;
+}
+.rslides_tabs a {
+  font-size: 1em;
+}
+.rs-slideshow a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* The footer */
+#footer, #footer a {
+  color: #FFFFFF;
+}
+.region-bottom {
+  color: #444A55;
+}
+
+/* Add styles for ordered list type */
+.page-glossary ol.lower-alpha, ol.lower-alpha {
+  list-style-type: lower-alpha;
+}
+.page-glossary ol.lower-roman, ol.lower-roman {
+  list-style-type: lower-roman;
+}
+.page-glossary ol.upper-alpha, ol.upper-alpha {
+  list-style-type: upper-alpha;
+}
+.page-glossary ol.upper-roman, ol.upper-roman {
+  list-style-type: upper-roman;
+}
+.page-glossary .item-list > ol {
+  list-style: outside decimal none;
+  padding: 0;
+}
+.page-glossary .view-id-glossary {
+  padding: 1em;
+  border-top: #454B56 2px solid;
+  border-bottom: #454B56 2px solid;
+}
+.page-glossary .item-list ol li.views-row-even,
+.page-glossary .view-glossary .views-row-even {
+  margin: 0.5em 0;
+  background-color: #D8EFF7;
+  padding: 0.5em;
+}
+.page-glossary .item-list ol li.views-row-odd,
+.page-glossary .view-glossary .views-row-odd {
+  margin: 0.5em 0;
+  background-color: #F5FBFD;
+  padding: 0.5em;
+}
+.page-glossary .views-field-field-link-to {
+  margin: 1em 0;
+  border: 1px dotted #666666;
+  padding: 1em;
+  background-color: #FBFBFB;
+}
+/* Release Management and Enhancement list */
+.page-enhancements-list table td,
+.page-enhancements-list table th,
+.section-releases .panel-pane table td,
+.section-releases .panel-pane table th,
+.page-release-management .pane-views table td,
+.page-release-management .pane-views table th {
+  padding: 0.5em;
+  text-align: left;
+  border: 1px solid #666666;
+}
+.page-enhancements-list table th,
+.section-releases .panel-pane table th,
+.page-release-management .pane-views table th {
+  background-color: #F5FBFD;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+.page-enhancements-list table,
+.section-releases .panel-pane table,
+.page-release-management .pane-views table {
+  width: 100%;
+  margin: 0 0 1em 0;
+}
+.paragraphs-item-release-task {
+  margin: 0.5em 0;
+  background-color: #F5FBFD;
+}
+.paragraphs-item-release-task .content {
+  padding: 0.5em;
+}
+.paragraphs-item-release-task .content div {
+  margin: 0.5em;
+}
+/* Styles for accordion dropdown */
+.ui-accordion.ui-widget {
+  border: 1px solid $grey--mid;
+  border-bottom: 0;
+  margin-bottom: 15px;
+
+  @include mq(min, $BP-mobile) {
+    margin-bottom: 30px;
+  }
+
+  .ui-accordion-header {
+    position: relative;
+
+    padding: 10px 20px;
+    padding-right: 60px;
+
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid $grey--mid;
+    // border-width: 1px 0;
+    border-radius: 0;
+
+    background: none;
+    transition: 0.3s;
+
+    font-size: 18px;
+    font-family: $font--condensed;
+
+    &:hover, &:focus {
+      background-color: rgba($grey--pale, 0.5);
+    }
+
+    .ui-icon {
+      background: none;
+      display: block;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 30px;
+      left: auto;
+      margin: auto;
+
+      &::before, &::after {
+        content: '';
+        display: block;
+
+        background: $grey--mid;
+        transition: 0.5s;
+
+        height: 2px;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+
+    @include mq(max, $BP-mobile) {
+      padding-right: 40px;
+
+      .ui-icon {
+        right: 15px;
+      }
+    }
+
+    &.ui-state-active {
+      background: $green--main;
+      color: #fff;
+
+      .ui-icon {
+        &::before, &::after {
+          background: #fff;
+        }
+        &::before {
+          transform: rotate(0deg);
+        }
+        &::after {
+          transform: rotate(-180deg);
+        }
+      }
+
+      &:hover, &:focus {
+        background-color: $green--dim;
+      }
+    }
+  }
+
+  .ui-accordion-content {
+    padding: 20px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $grey--mid;
+    font-family: $font--standard;
+
+    h4 {
+      font-family: $font--condensed;
+      color: $grey--dark;
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.ext {
+  display: inline-block !important;
+}
+/* Styles for quicktab header */
+.quicktabs-ui-wrapper .ui-widget-header {
+    background: url("../images/gl-nav.gif") repeat-x scroll left;
+}
+/*
+  Guide to PPSR statistics styles
+ */
+.view-statistics-guide table {
+  text-align: center;
+}
+.views-view-grid.cols-3 td.statistics-guide {
+  background: white;
+}
+.view-statistics-guide tr.row-2.row-last td {
+  padding-top: 3em;
+}
+ /* 
+Optional floating class to specify elements
+ */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.clear {
+  clear: both;
+}
+.clear-left {
+  clear: left;
+}
+.clear-right {
+  clear: right;
+}
+.none-display {
+  display: none;
+} 
+.block-display {
+  display: block;
+}
+.inline-display {
+  display: inline;
+}
+.left-pad-one {
+  padding-left: 1em;
+}
+.right-pad-one {
+  padding-right: 1em;
+}
+.top-pad-one {
+  padding-top: 1em;
+}
+.bottom-pad-one {
+  padding-bottom: 1em;
+}
+.padding-one {
+  padding: 1em;
+}
+.left-mar-one {
+  margin-left: 1em;
+}
+.right-mar-one {
+  margin-right: 1em;
+}
+.top-mar-one {
+  margin-top: 1em;
+}
+.bottom-mar-one {
+  margin-bottom: 1em;
+}
+.margin-one {
+  margin: 1em;
+}
+.zero-padding {
+  padding: 0;
+}
+.zero-margin {
+  margin: 0;
+}
+.date-form-element-content-multiline {
+  padding: 10px 7px !important;
+}

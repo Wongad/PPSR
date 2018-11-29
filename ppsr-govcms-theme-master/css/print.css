@@ -1,0 +1,35 @@
+@media print{a:link,
+a:visited{text-decoration:underline !important;}
+#content a[href]:after{content:"-"attr(href);font-weight:normal;}
+#content a[href^="javascript"]:after,
+#content a[href^="#"]:after{content:"";}
+#content abbr[title]:after{content:"-"attr(title);}
+#content{float:none !important;width:100% !important;margin:0 !important;padding:0 !important;}
+body,
+#page,
+#main,
+#content{color:#000;background-color:transparent !important;background-image:none !important;}
+#skip-link,
+#toolbar,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer,
+.breadcrumb,
+.tabs,
+.action-links,
+.links,
+.book-navigation,
+.forum-topic-navigation,
+.pager,
+.feed-icons{visibility:hidden;display:none;}
+.block-search-api-page,
+#block-block-6,
+#block-block-31,
+.header__region{display:none;}
+.ui-accordion-content{background:none !important;display:block !important;border-top:0 !important;}
+.ui-accordion-header{border-top:1px solid #aaaaaa;border-right:1px solid #aaaaaa;border-left:1px solid #aaaaaa;background:#ffffff none !important;font-weight:normal;color:#212121;}
+.ui-corner-bottom,
+.ui-corner-top,
+.ui-corner-all{border-radius:0 !important;}
+}

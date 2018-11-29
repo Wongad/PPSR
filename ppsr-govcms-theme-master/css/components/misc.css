@@ -1,0 +1,1738 @@
+/**
+ * @file
+ * SMACSS Modules
+ *
+ * Adds modular sets of styles.
+ *
+ * Additional useful selectors can be found in Zen's online documentation.
+ * https://drupal.org/node/1707736
+ */
+
+/**
+ * Wireframes.
+ */
+.with-wireframes #header,
+.with-wireframes #main,
+.with-wireframes #content,
+.with-wireframes #navigation,
+.with-wireframes .region-sidebar-first,
+.with-wireframes .region-sidebar-second,
+.with-wireframes #footer,
+.with-wireframes .region-bottom {
+  outline: 1px solid #ccc;
+  /* IE6/7 do not support the outline property. */
+  border: 1px solid #ccc;
+}
+
+/**
+ * Accessibility features.
+ */
+/* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.element-invisible,
+.element-focusable, 
+.mobile-content sub {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/**
+ * Branding header.
+ */
+body {
+  background: #FFFFFF url('../../images/header-bkg.png') repeat-x scroll center top;
+  color: #000000;
+}
+/* Wrapping link for logo. */
+.header__logo {
+  float: left; 
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo image. */
+.header__logo:hover, .header__logo:focus {
+  background-color: transparent;
+}
+.header__logo-image {
+  vertical-align: bottom;
+}
+
+/* Wrapper for website name and slogan. */
+.header__name-and-slogan {
+  float: left;
+}
+
+/* The name of the website. */
+.header__site-name {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+/* The link around the name of the website. */
+.header__site-link:link,
+.header__site-link:visited {
+  color: #000;
+  text-decoration: none;
+}
+.header__site-link:hover,
+.header__site-link:focus {
+  text-decoration: underline;
+}
+
+/* The slogan (or tagline) of a website. */
+.header__site-slogan {
+  margin: 0;
+}
+
+/* The secondary menu (login, etc.) */
+.header__secondary-menu {
+  float: right; 
+}
+
+/* Wrapper for any blocks placed in the header region. */
+.header__region {
+}
+/* The footer */
+#footer {
+  background: url('../../images/footer-bkg.png') no-repeat scroll right bottom #333333;
+  padding: 2em 1em 4em 1em;
+  margin-top: 0.5em;
+}
+#footer a:hover, #footer a:focus {
+  background-color: #000000;
+}
+
+/* The footer menu items */
+.region-footer .block-menu .menu {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.region-footer .block-menu .menu li {
+  display: inline;
+  border-left: 1px solid #FFFFFF;
+}
+.region-footer .block-menu .menu li:first-child {
+  border: medium none;
+}
+.region-footer .block-menu .menu li:first-child a {
+  padding-left: 0;
+}
+.region-footer .block-menu .menu li a {
+  font-size: 0.9em;
+  line-height: 2;
+  padding: 0.5em;
+}
+.region-footer .block p, .region-bottom p {
+  margin: 0;
+}
+.region-footer .block a[href$="user/AFSAGovAu"] {
+  display: inline-block;
+  width: 90px;
+  height: 56px;
+  text-indent: -1000px;
+  background: transparent url('../../images/youtube-icon.png') no-repeat scroll center center;
+  overflow: hidden;
+}
+
+/**
+ * Navigation bar.
+ */
+#navigation {
+  z-index: 100;
+}
+#navigation .block {
+  margin-bottom: 0;
+}
+
+/* Main menu and secondary menu links and menu block links. */
+#navigation .links,
+#navigation .menu {
+  margin: 0;
+  padding: 0;
+  text-align: left; 
+}
+#navigation .links li,
+#navigation .menu li {
+  /* A simple method to get navigation links to appear in one line. */
+  float: left; 
+  list-style-type: none;
+  list-style-image: none;
+}
+#navigation .links li:hover,
+#navigation .menu li:hover,
+#navigation .links li.active-trail,
+#navigation .menu li.active-trail,
+li.active-trail .sf-no-children {
+  background-color: #38424D;
+}
+#navigation .links a:hover, #navigation .menu a:hover,
+#navigation .links a:focus, #navigation .menu a:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+#navigation .links a[href$="need-help"],
+#navigation .menu a[href$="need-help"] {
+  /* Need help icon display */
+  background: transparent url('../../images/qn-icon.png') no-repeat scroll right 9px;
+  padding-right: 1.3em;
+  padding-top: .3em;
+  margin-top: -.3em;
+}
+
+/**
+ * Breadcrumb navigation.
+ */
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+}
+
+/**
+ * Titles.
+ */
+.node__title,          /* Title of a piece of content when it is given in a list of content. */
+/*.block__title,          Block title. */
+.comments__title,      /* Comment section heading. */
+.comments__form-title, /* Comment form heading. */
+.comment__title {     /* Comment title. */
+  margin: 0;
+}
+.page__title {
+  border-bottom: 8px solid #454B56;
+}
+/**
+ * Messages.
+ */
+.messages,
+.messages--status,
+.messages--warning,
+.messages--error {
+  margin: 1.5em 0;
+  padding: 10px 10px 10px 50px; 
+  background-image: url('../../images/message-24-ok.png');
+  background-position: 8px 8px; 
+  background-repeat: no-repeat;
+  border: 1px solid #be7;
+}
+.messages--warning {
+  background-image: url('../../images/message-24-warning.png');
+  border-color: #ed5;
+}
+.messages--error {
+  background-image: url('../../images/message-24-error.png');
+  border-color: #ed541d;
+}
+.messages__list {
+  margin: 0;
+}
+.messages__item {
+  list-style-image: none;
+}
+
+/* Core/module installation error messages. */
+.messages--error p.error {
+  color: #333333;
+}
+
+/* System status report. */
+.ok,
+.messages--status {
+  background-color: #f8fff0;
+  color: #234600;
+}
+.warning,
+.messages--warning {
+  background-color: #fffce5;
+  color: #884400;
+}
+.error,
+.messages--error {
+  background-color: #fef5f1;
+  color: #8c2e0b;
+}
+
+/**
+ * Tabs.
+ */
+
+/* Basic positioning styles shared by primary and secondary tabs. */
+.tabs-primary,
+.tabs-secondary {
+  overflow: hidden;
+  background-image: linear-gradient(#AFAFAF, transparent);
+  list-style: none;
+  border-bottom: 1px solid #AFAFAF;
+  margin: 1.5em 0;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.tabs-primary__tab,
+.tabs-secondary__tab,
+.tabs-secondary__tab.is-active {
+  float: left; 
+  margin: 0 3px;
+}
+a.tabs-primary__tab-link,
+a.tabs-secondary__tab-link {
+  display: block;
+  line-height: 1.5em;
+}
+
+/* Primary tabs. */
+.tabs-primary__tab,
+.tabs-primary__tab.is-active {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-shadow: 1px 1px 0 #FFFFFF;
+  border: 1px solid #AFAFAF;
+  border-bottom-color: transparent;
+  /* IE 9 and earlier don't understand gradients. */
+  border-bottom: 0;
+}
+.is-active.tabs-primary__tab {
+  border-bottom-color: #FFFFFF;
+}
+a.tabs-primary__tab-link,
+a.tabs-primary__tab-link.is-active {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #333333;
+  background-color: #dedede;
+  letter-spacing: 1px;
+  padding: 0 1em;
+  text-align: center;
+}
+a.tabs-primary__tab-link:hover,
+a.tabs-primary__tab-link:focus {
+  background-color: #e9e9e9;
+  border-color: #f2f2f2;
+}
+a.tabs-primary__tab-link:active,
+a.tabs-primary__tab-link.is-active {
+  background-color: transparent;
+  background-image: linear-gradient(#e9e9e9, #f7f7f7);
+  border-color: #fff;
+}
+
+/* Secondary tabs. */
+.tabs-secondary {
+  font-size: .9em;
+  /* Collapse bottom margin of ul.primary. */
+  margin-top: -1.5em;
+}
+.tabs-secondary__tab,
+.tabs-secondary__tab.is-active {
+  margin: 0.75em 3px;
+}
+a.tabs-secondary__tab-link,
+a.tabs-secondary__tab-link.is-active {
+  border-radius: 0.75em;
+  text-shadow: 1px 1px 0 white;
+  background-color: #f2f2f2;
+  color: #666666;
+  padding: 0 .5em;
+}
+a.tabs-secondary__tab-link:hover,
+a.tabs-secondary__tab-link:focus {
+  background-color: #dedede;
+  border-color: #999999;
+  color: #333333;
+}
+a.tabs-secondary__tab-link:active,
+a.tabs-secondary__tab-link.is-active {
+  text-shadow: 1px 1px 0 #333333;
+  background-color: #666666;
+  border-color: #000000;
+  color: #FFFFFF;
+}
+
+/**
+ * Inline styles.
+ */
+
+/* List of links generated by theme_links(). */
+.inline {
+  display: inline;
+  padding: 0;
+}
+.inline li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em 0 0; 
+}
+
+/* The inline field label used by the Fences module. */
+span.field-label {
+  padding: 0 1em 0 0; 
+}
+
+/**
+ * "More" links.
+ */
+.more-link {
+  text-align: right; 
+}
+.more-help-link {
+  text-align: right; 
+}
+.more-help-link a {
+  background-image: url('../../images/help.png');
+  background-position: 0 50%; 
+  background-repeat: no-repeat;
+  padding: 1px 0 1px 20px; 
+}
+
+/**
+ * Pager.
+ */
+
+/* A list of page numbers when more than 1 page of content is available. */
+.pager {
+  clear: both;
+  padding: 0;
+  text-align: center;
+}
+.pager-item,     /* A list item containing a page number in the list of pages. */
+.pager-first,    /* The first page's list item. */
+.pager-previous, /* The previous page's list item. */
+.pager-next,     /* The next page's list item. */
+.pager-last,     /* The last page's list item. */
+.pager-ellipsis, /* A concatenation of several list items using an ellipsis. */
+.pager-current {/* The current page's list item. */
+  display: inline;
+  padding: 0 0.5em;
+  list-style-type: none;
+  background-image: none;
+}
+.pager-current {
+  font-weight: bold;
+}
+
+/**
+ * Blocks.
+ */
+
+/* Block wrapper. */
+.region-header .contextual-links-region:first-of-type {
+  padding: 1em .4em 0 0;
+}
+.region-header .contextual-links-region {
+  padding: 0;
+  white-space: nowrap;
+  float: right;
+  clear: right;
+  min-width: 40%;
+  padding: 1em 0;
+}
+
+/* Block header PPSR links. */
+.region-header a[href^="https://transact"] {
+  background-image: url('../../images/white-chevron.png');
+  background-color: #006171;
+  background-image: url('../../images/white-chevron.png'), linear-gradient(to top right, #333333, #006171); 
+  background-position: 94% center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  float: right;
+  padding: .5em 2.1em .5em 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  margin: 0 .3em .3em;
+}
+.region-header a[href^="https://transact"]:focus,
+.region-header a[href^="https://transact"]:hover {
+  text-decoration: underline;
+}
+.region-header p:first-of-type a[href^="https://transact"] {
+  background-image: url('../../images/register-icon-white.png');
+  background-color: #AD2109;
+}
+.region-header p:first-of-type a:focus,
+.region-header p:first-of-type a:hover {
+ background-color: #15505F;
+}
+
+/* Block search header. */
+.region-header .contextual-links-region:first-of-type form {
+  float: right;
+}
+.region-header .contextual-links-region div {
+  display: inline-block;
+  float: left;
+}
+.search-form .form-text, .search-form-widget .form-text {
+  min-width: 180px;
+  padding: .2em .5em;
+  float: left;
+}
+.region-header .search-form-widget input[type="submit"] {
+  width: 2em;
+  height: 2em;
+  text-indent: -1000px;
+  float: right;
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../../images/search-white.png');
+}
+.search-form .form-submit, 
+.search-form-widget .form-submit {
+  border:none;
+  background-color: #27424F;
+  padding:.2em 1em .3em 1em;
+  color: #FFF;
+}
+.search-form .form-submit:hover, 
+.search-form .form-submit:focus, 
+.search-form-widget .form-submit:hover,
+.search-form-widget .form-submit:focus {
+  background-color:#006171;
+}
+/* Search page form */
+.search-form {
+  margin-top: 1em;
+}
+li.search-result {
+    background-color: #EAEAEA;
+    padding: .5em;
+}
+.search-info {
+  display: none;
+}
+/**
+ * Menus.
+ */
+   /* Style left navigation layout */
+.sidebar-first .menu-block-wrapper a {
+  color: #FFFFFF;
+  padding-left: 1em;
+  display: block;
+}
+.sidebar-first .menu-block-wrapper a:hover, 
+.sidebar-first .menu-block-wrapper a:focus {
+  background-color: transparent;
+}
+.sidebar-first .menu-block-wrapper .menu__item {
+  border-bottom: 1px solid #EAF0F3;
+  padding: 1em 0 1em 0;
+}
+.sidebar-first .menu-block-wrapper .menu {
+  margin-top: 1em;
+  padding-left: 0;
+}
+.menu__item a {
+  text-decoration: none;
+  padding-right: 0.5em;
+}
+.menu__item a:hover,
+.menu__item a:focus {
+  text-decoration: underline;
+}
+.sidebar-first .block-menu-block .menu__item.is-leaf {
+  background-color: #4E545E;
+}
+.sidebar-first .block-menu-block ul.menu ul.menu {
+  margin-left: -4em;
+  padding-left: 4em;
+}
+.sidebar-first .block-menu-block ul.menu ul.menu .menu__item.is-collapsed {
+  background-color: #4E545E;
+  background-image: none;
+}
+.sidebar-first .block-menu-block .menu__item.active {
+  background-color: #EAF0F3 !important;
+}
+.sidebar-first .block-menu-block .menu__item a.active {
+  color: #000000 !important;
+}
+.sidebar-first .block-menu-block .menu__item.is-expanded {
+  list-style: none outside none;
+  background: url('../../images/chevron-down.png') no-repeat scroll 96% 1.3em #343942;
+  padding-bottom: 0;
+}
+.sidebar-first .block-menu-block .menu__item.is-collapsed {
+  list-style: none outside none;
+  background: url('../../images/chevron-right.png') no-repeat scroll 96% center #125361;
+  padding-right: .8em;
+}
+.menu__item.is-leaf,
+.menu__item.is-expanded,
+.menu__item.is-collapsed {
+  list-style: none outside none;
+}
+
+/**
+ * Marker.
+ */
+
+/* The "new" or "updated" marker. */
+.new {
+  color: #FFFFFF;
+  background-color: #AF0000;
+  padding: 3px;
+  margin-right: 0.4em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.update {
+  color: #AF0000;
+  background-color: transparent;
+}
+
+/**
+ * Unpublished note.
+ */
+
+/* The word "Unpublished" displayed underneath the content. */
+.unpublished {
+  height: 0;
+  overflow: visible;
+  /* Remove background highlighting from <mark> in normalize. */
+  background-color: transparent;
+  color: #d8d8d8;
+  font-size: 4em;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  /* A very nice CSS3 property. */
+  word-wrap: break-word;
+}
+.lt-ie8 .node-unpublished > *,
+.lt-ie8 .comment-unpublished > * {
+  /* Otherwise these elements will appear below the "Unpublished" text. */
+  position: relative;
+}
+
+/**
+ * Comments.
+ */
+
+/* Wrapper for the list of comments and its title. */
+.comments {
+  margin: 1.5em 0;
+}
+
+/* Preview of the comment before submitting new or updated comment. */
+.comment-preview {
+  /* Drupal core will use a #ffffea background. See #1110842. */
+  background-color: #ffffea;
+}
+
+/* Wrapper for a single comment. */
+.comment {
+  /* Comment's permalink wrapper. */
+}
+.comment .permalink {
+  text-transform: uppercase;
+  font-size: 75%;
+}
+
+/* Nested comments are indented. */
+.indented {
+  /* Drupal core uses a 25px left margin. */
+  margin-left: 30px; 
+}
+
+/**
+ * Forms.
+ */
+
+/* Wrapper for a form element (or group of form elements) and its label. */
+.form-item {
+  margin: 0;
+}
+
+/* Pack groups of checkboxes and radio buttons closer together. */
+.form-checkboxes .form-item,
+.form-radios .form-item {
+  /* Drupal core uses "0.4em 0". */
+  margin: 0;
+}
+
+/* Form items in a table. */
+tr.odd .form-item,
+tr.even .form-item {
+  margin: 0;
+}
+
+/* Highlight the form elements that caused a form submission error. */
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 1px solid #c00;
+}
+
+/* The descriptive help text (separate from the label). */
+.form-item .description {
+  font-size: 0.85em;
+}
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: 2.4em;
+}
+
+/* The part of the label that indicates a required field. */
+.form-required {
+  color: #AF0000;
+}
+
+/* Labels for radios and checkboxes. */
+label.option {
+  display: inline;
+  font-weight: normal;
+}
+
+/* Password confirmation. */
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/* Drupal's default login form block. */
+#user-login-form {
+  text-align: left; 
+}
+
+/**
+ * OpenID
+ *
+ * The default styling for the OpenID login link seems to assume Garland's
+ * styling of list items.
+ */
+
+/* OpenID creates a new ul above the login form's links. */
+.openid-links {
+  /* Position OpenID's ul next to the rest of the links. */
+  margin-bottom: 0;
+}
+
+/* The "Log in using OpenID" and "Cancel OpenID login" links. */
+.openid-link,
+.user-link {
+  margin-top: 1.5em;
+}
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* Un-do some of the padding on the ul list. */
+  margin-left: -20px; 
+}
+#user-login ul {
+  margin: 1.5em 0;
+}
+
+/**
+ * Drupal admin tables.
+ */
+form th {
+  text-align: left; 
+  padding-right: 1em; 
+  border-bottom: 3px solid #ccc;
+}
+form tbody {
+  border-top: 1px solid #ccc;
+}
+form table ul {
+  margin: 0;
+}
+tr.even,
+tr.odd {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1em 0.6em;
+}
+tr.even {
+  background-color: #fff;
+}
+.lt-ie8 tr.even th,
+.lt-ie8 tr.even td,
+.lt-ie8 tr.odd th,
+.lt-ie8 tr.odd td {
+  /* IE doesn't display borders on table rows. */
+  border-bottom: 1px solid #ccc;
+}
+
+/* Markup generated by theme_tablesort_indicator(). */
+td.active {
+  background-color: #ddd;
+}
+
+/* Center checkboxes inside table cell. */
+td.checkbox,
+th.checkbox {
+  text-align: center;
+}
+
+/* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
+td.menu-disabled {
+  background: #ccc;
+}
+
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+
+/* Suggestion list. */
+#autocomplete .selected {
+  background: #0072b9;
+  color: #fff;
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+html.js .collapsible .fieldset-legend {
+  background-image: url('../../images/menu-expanded.png');
+  background-position: 5px 65%; 
+  background-repeat: no-repeat;
+  padding-left: 15px; 
+}
+html.js .collapsed .fieldset-legend {
+  background-image: url('../../images/menu-collapsed.png'); 
+  background-position: 5px 50%; 
+}
+.fieldset-legend .summary {
+  color: #999;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+tr.drag {
+  background-color: #fffff0;
+}
+tr.drag-previous {
+  background-color: #ffd;
+}
+.tabledrag-toggle-weight {
+  font-size: 0.9em;
+}
+
+/**
+ * TableSelect behavior.
+ *
+ * @see tableselect.js
+ */
+tr.selected td {
+  background: #ffc;
+}
+
+/**
+ * Progress bar.
+ *
+ * @see progress.js
+ */
+.progress {
+  font-weight: bold;
+}
+.progress .bar {
+  background: #ccc;
+  border-color: #666;
+  margin: 0 0.2em;
+  border-radius: 3px;
+}
+.progress .filled {
+  background-color: #0072b9;
+  background-image: url('../../images/progress.gif');
+}
+
+/**
+ * Accordian
+ * @see jquery.ui.accordian.css
+ */
+.ui-accordion .ui-accordion-header a {
+  padding: 0;
+}
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+  color: #444444;
+}
+
+/* Slideshow */
+.rs-slideshow {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  height: 18em;
+  padding: 0 !important;
+  margin: 0 0 1em 0 !important;
+  background: #005D5D url('../../images/slide-bkg.jpg') no-repeat scroll right bottom;
+}
+.rs-slideshow .field-items {
+  word-wrap: normal !important;
+}
+.rs-slideshow .form-required {
+  color: #FFBFBF;
+}
+.rslides_tabs {
+  list-style: none outside none;
+  display: block;
+  width: 70%;
+  position: absolute;
+  margin-top: -4em !important;
+  margin-left: 1em !important;
+  z-index: 30;
+}
+.rslides_tabs a {
+  float: left;
+  display: block;
+  background-color: #005D5D;
+  opacity: 0.5;
+  text-align: center;
+  text-decoration: none;
+  min-width: 1.4em;
+  min-height: 1.5em;
+  margin-right: .5em;
+  background-image: none;
+}
+.rslides_tabs a:hover,
+.rslides_tabs a:focus,
+.rslides_tabs li.rslides_here a {
+  background-color: #005D5D;
+  opacity: 1;
+}
+.rslides_tabs a.pause {
+  text-indent: -1000px;
+  width: 1.5em;
+  height: 1.5em;
+  background: #005D5D url('../../images/featured-articles-pause.png') no-repeat scroll center top;
+  overflow: hidden;
+}
+.rslides_tabs a.paused {
+  background: #005D5D url('../../images/featured-articles-play.png') no-repeat scroll center top;
+}
+.rs-slideshow a:hover, .rs-slideshow a:focus,
+.rslides_tabs a:hover, .rslides_tabs a:focus  {
+  text-decoration: underline;
+  background-color: transparent;
+}
+.rs-slideshow li {
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 18em;
+}
+.rs-slideshow li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+.front.not-logged-in .rs-slideshow img {
+  display: block;
+  border: 0px none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.rs-slideshow .field-name-title,
+.rs-slideshow .field-name-body,
+.rs-slideshow .field-name-node-link {
+  padding: 1em 6em 1em 1em;
+}
+.rs-slideshow .field-name-field-read-more a {
+  display: block;
+  height: 18em;
+  text-shadow: 1px 1px 5px #000000;
+  z-index: 10;
+  font-size: 2em;
+}
+/* Adjust log in view for slideshow */
+.front.logged-in .field-name-field-slide-image .field-item img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+}
+.front.logged-in .field-name-field-slide-image .field-item {
+  height: 18em;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+/* Homepage layout */
+.front .home-summary {
+  background-color: #AD2109; 
+  background: #AD2109 linear-gradient(to top right, #F37D61, #AD2109); 
+  padding: .5em 1em 0 1em;
+  margin: 0;
+  border-bottom: 1px solid #FFFFFF;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 1px 1px 5px #000000;
+}
+.front .home-summary p {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.front .home-summary img {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  max-height: 328px;
+  bottom: 0;
+}
+.front .home-summary a {
+  background: #006171 url('../../images/gl-nav.gif') repeat-x scroll left bottom;
+  padding: .5em 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 10;
+  margin: 0;
+}
+.front .home-summary a:hover, .front .home-summary a:focus {
+  background-color: #006171;
+  background-image: none;
+}
+.front .home-summary h2 {
+  margin-top: 0;
+  margin-bottom: .3em;
+  position: relative;
+  z-index: 2;
+}
+.front .pane-individuals, .front .pane-business,
+.front .pane-professionals, .front .pane-latest-news {
+  border: 1px solid #909090;
+  padding: 0 1em 0.4em;
+  margin: 0;
+}
+.front .pane-individuals h2, .front .pane-business h2,
+.front .pane-professionals h2, .front .pane-latest-news h2 {
+  width: 100%;
+  display: block;
+  border-bottom: 3px solid #454B56;
+  margin-top: .5em;
+  margin-bottom: 0;
+  color: #454B56;
+}
+.front .pane-latest-news .field-type-datetime {
+  font-size: 0.7em;
+  float: right;
+}
+.front .pane-latest-news .views-row {
+  padding: 0.5em 0;
+}
+.front .pane-latest-news .views-row-1 {
+  border-bottom: 1px solid #909090;
+}
+/* Can be remove after successful migration of blog and speeches*/
+.pane-latest-news h3:first-of-type{border:none;}
+.pane-latest-news h3{border-top:1px solid #454B56;padding-top:.5em;margin:0;}
+
+.front .center-wrapper .panel-col .pane-block li:first-child a,
+.front .center-wrapper .panel-col-last .pane-block li:first-child a {
+  display: inline;
+  background: transparent url('../../images/double-chevron-icon-green.png') no-repeat scroll right center;
+  padding-right: 1.4em;
+}
+.front .center-wrapper a[href^="https://transact"] {
+  background: #AD2109 url('../../images/register-icon-white.png') no-repeat scroll right center !important;
+  color: #FFFFFF;
+  padding: 2px 1.5em 0 0;
+  white-space: nowrap;
+}
+.front .center-wrapper .panel-col .pane-block li a:hover,
+.front .center-wrapper .panel-col-last .pane-block li a:hover,
+.front .center-wrapper .panel-col .pane-block li a:focus,
+.front .center-wrapper .panel-col-last .pane-block li a:focus {
+  text-decoration: underline;
+}
+.front .center-wrapper .panel-col .pane-block,
+.front .center-wrapper .panel-col-last .pane-block {
+  background-color: #DAF0F6;
+}
+.get-help-block {
+  background-image: url('../../images/help-icon-white.png');
+  background-image: url('../../images/help-icon-white.png'), linear-gradient(to top right, #A2C3CA, #DAF0F6); 
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 124% -90%;
+}
+.manage-rego-block {
+  background-image: url('../../images/migrated-registration-icon-white.png'); 
+  background-image: url('../../images/migrated-registration-icon-white.png'), linear-gradient(to top right, #A2C3CA, #DAF0F6); 
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right 30%;
+}
+.create-rego-block {
+  background-image: url('../../images/create-registration-icon-white.png');
+  background-image: url('../../images/create-registration-icon-white.png'), linear-gradient(to top right, #A2C3CA, #DAF0F6); 
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right top;
+}
+.car-search-block {
+  background-image: url('../../images/car-icon-white.png'); 
+  background-image: url('../../images/car-icon-white.png'), linear-gradient(to top right, #A2C3CA, #DAF0F6); 
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right bottom;
+}
+.front .center-wrapper .pane-block ul,
+.front .center-wrapper .pane-views ul {
+  list-style: none outside none;
+  padding-left: 0;
+  margin: 0;
+}
+.front .center-wrapper .pane-views ul li {
+  border-bottom: 1px solid #909090;
+  padding: .5em 0;
+}
+.front .center-wrapper .pane-block ul li {
+  border: none;
+}
+.front .center-wrapper .panel-col .pane-block li,
+.front .center-wrapper .panel-col-last .pane-block li {
+  display: block;
+  position: relative;
+  margin: .5em;
+  padding: .5em;
+  background-color: #AD2109;
+}
+.front .center-wrapper .panel-col .pane-block li:first-child,
+.front .center-wrapper .panel-col-last .pane-block li:first-child {
+  background-color: transparent;
+  padding: 0 .5em;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/**
+* 2nd level-landing pages tables (light-blue boxes).
+*/
+.views-view-grid .node__title a {
+  color: #333333;
+  text-decoration: none;
+  display: inline;
+  background: transparent url('../../images/double-chevron-icon-green.png') no-repeat scroll right center;
+  padding-right: 1.4em;
+}
+.views-view-grid .node__title a:hover, .views-view-grid .node__title a:focus {
+  text-decoration: underline;
+}
+.views-view-grid td {
+  background-color: #B3DDE9;
+  background: linear-gradient(to top right, #A2C3CA, #DAF0F6); 
+  border: 1px solid #FFFFFF;
+}
+table.views-view-grid p {
+  margin: .5em 0;
+}
+table.views-view-grid {
+  border-collapse: separate;
+  empty-cells: hide;
+}
+.views-view-grid td article {
+  padding: 1em;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right bottom;
+  min-height: 8em;
+}
+/* Specific background image for Search the Register page.*/
+.page-search-the-ppsr .views-view-grid {
+  border-collapse: collapse;
+}
+.page-search-the-ppsr .views-view-grid td article{
+  min-height: 12em;
+  width: 88%;
+  background-size: 150px;
+}
+.page-search-the-ppsr .views-view-grid td article:hover {
+  background-color: #EAEAEA;
+}
+.views-view-grid td article[about^='/searching-motor-vehicles'],
+.views-view-grid td article[about^='/how-motor-vehicle-search'],
+.views-view-grid td article[about^='/how-quick-motor-vehicle-search'] {
+  background-image: url('../../images/car-icon-white.png');
+}
+.views-view-grid td article[about^='/searching-watercraft'],
+.views-view-grid td article[about^='/how-watercraft-search'] {
+  background-image: url('../../images/watercraft-icon-white.png');
+}
+.views-view-grid td article[about^='/searching-aircraft-or-aircraft-parts'],
+.views-view-grid td article[about^='/how-aircraft-search'] {
+  background-image: url('../../images/aircraft-icon-white.png');
+}
+.views-view-grid td article[about^='/searching-intellectual-property'],
+.views-view-grid td article[about^='/how-ip-search'] {
+  background-image: url('../../images/IP-icon-white.png');
+}
+.views-view-grid td article[about^='/searching-grantors'],
+.views-view-grid td article[about^='/how-searching-grantors'] {
+  background-image: url('../../images/grantor-icon-white.png');
+}
+.views-view-grid td article[about^='/searching-ppsr-registration-number'],
+.views-view-grid td article[about^='/how-searching-ppsr-registration-number'] {
+  background-image: url('../../images/create-registration-icon-white.png');
+}
+.views-view-grid td article[about^='/searching-order-two-registration-events'],
+.views-view-grid td article[about^='/how-searching-order-two-registration-events'] {
+  background-image: url('../../images/registration-event-icons-white.png');
+}
+.views-view-grid td article[about^='/searching-point-time'],
+.views-view-grid td article[about^='/how-searching-point-time'] {
+  background-image: url('../../images/clock-icon-white.png');
+}
+.views-view-grid td article[about^='/retrieve-search-results'],
+.views-view-grid td article[about^='/how-retrieve-search-results'] {
+  background-image: url('../../images/serial-number-icon-white.png');
+}
+.views-view-grid td article[about^='/search-certificate-request-and-reissue'],
+.views-view-grid td article[about^='/how-search-certificate-request-and-reissue'] {
+  background-image: url('../../images/create-registration-icon-white.png');
+}
+.views-view-grid td article[about^='/understanding-search-results'], 
+.views-view-grid td article[about^='/how-understanding-search-results'] {
+  background-image: url('../../images/help-icon-white.png');
+}
+.views-view-grid td article[about^='/searching-ppsr-migrated-registrations'],
+.views-view-grid td article[about^='/how-searching-ppsr-migrated-registrations'] {
+  background-image: url('../../images/migrated-registration-icon-white.png');
+}
+.panel-panel .pane-block {
+  border: 1px solid #909090;
+  padding: 0px 1em 1em;
+}
+.panel-panel .pane-block h2 {
+  width: 100%;
+  display: block;
+  border-bottom: 3px solid #454B56;
+  margin-top: 0.5em;
+  margin-bottom: 0px;
+  color: #454B56;
+}
+.field-name-field-case-studies .field-item, 
+.field-name-field-video .field-item,
+.panel-panel .pane-block ul li {
+  border-bottom: 1px solid #909090;
+  padding: 0.5em 0px;
+}
+.panel-panel .pane-block p a {
+  display: block;
+  color: #FFFFFF;
+  float: left;
+  background-image: url('../../images/white-chevron.png');
+  background-color: #AD2109; 
+  background-position: 94% center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  padding: .5em 2em .5em 1em;
+}
+#main .panel-panel .pane-block p a[href^="https://transact"] {
+  display: block;
+  color: #FFFFFF;
+  float: left;
+  background-image: url('../../images/register-icon-white.png');
+  background-color: #AD2109;
+  background-position: 94% center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  padding: .5em 2.3em .5em 1em;
+}
+#main .panel-panel .pane-block p a[href^="https://transact"]:hover,
+#main .panel-panel .pane-block p a[href^="https://transact"]:focus {
+  background-color: #AD2109;
+}
+.panel-panel .pane-block p a:hover, .panel-panel .pane-block p a:focus {
+  background-color: #AD2109;
+  background-image: url('../../images/white-chevron.png');
+}
+.panel-panel .pane-block p {
+  margin: 1em 0 0 0;
+  display: inline-block;
+}
+/* Announcements - critical notices */
+.pane-announcements {
+  border: 6px solid #F37D61;
+  background: #FDEBE6 url('../../images/cone-background.png') no-repeat scroll -10% 10%;
+}
+.pane-announcements h2.pane-title {
+  color: #FFFFFF;
+  background-color: #C62B09;
+  margin: 0;
+  padding: .5em 1em;
+  font-size: .9em;
+}
+.view-announcements .node-title {
+  border-bottom: 4px solid #C62B09;
+}
+.view-announcements .node-title,
+.view-announcements .node-title a {
+  background-image: none;
+  color: #C62B09;
+  text-decoration: none;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+}
+.view-announcements .node-title a:focus,
+.view-announcements .node-title a:hover {
+  text-decoration: underline;
+}
+.view-announcements li.views-row {
+  list-style: none;
+}
+.view-announcements .field-name-field-link-to {
+  background-image: url('../../images/white-chevron.png');
+  background-color: #006171;
+  background-position: 94% center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  float: right;
+  padding: .5em 1.5em .5em 1em;
+}
+.view-announcements .field-name-field-link-to:hover {
+  background-image: url('../../images/white-chevron.png');
+  background-color: #333333;
+}
+.view-announcements .field-name-field-link-to a {
+  background-image: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding-right: 1em;
+}
+.view-announcements .field-name-field-link-to a:hover,
+.view-announcements .field-name-field-link-to a:focus {
+  background-color: transparent;
+  text-decoration: underline;
+}
+.view-announcements .field-name-field-event-date {
+  color: #454B56;
+  font-size: 1.3em;
+  padding-top: 1em;
+}
+.view-announcements .field-name-field-timezone {
+  color: #454B56;
+}
+.view-announcements span.date-display-single div {
+  float: right;
+  padding-left: .4em;
+}
+.view-announcements .ui-state-active .toc-filter-processed:after {
+  display: none;
+}
+.view-announcements .ui-accordion-header, .view-announcements h3 a.toc-filter-processed {
+  background: #006171 !important;
+  color: #FFFFFF;
+  border-color: #006171;
+}
+.feed a {
+  background-image: none;
+  margin: 2px;
+}
+/**
+ * Wysiwyg tables styles
+ */
+table caption {
+  font-weight: bold;
+  line-height: 2em;
+}
+table.left-table caption, table.left-table th, table.left-table td {
+  text-align: left;
+}
+table.teal-table th, table.teal-table th a,
+table.grey-table th, table.grey-table th a {
+  color: #FFFFFF;
+  text-align: left;
+  padding: 4px;
+}
+table.teal-table th {
+  background-color: #125361;
+}
+table.grey-table th {
+  background-color: #4E545E;
+}
+table.grey-table td, table.teal-table td {
+  padding: 4px;
+}
+table.grey-table tr:nth-child(even) td, table.teal-table tr:nth-child(even) td {
+  background-color: #EAEAEA;
+}
+.ui-white .ui-icon {
+  background-image: url('../../images/ui-icons_ffffff_256x240.png'); 
+}
+/**
+ * Fees tables styles
+ */
+.fees-ppsr .field-type-number-decimal h3.note {
+  padding: 0 0.5em 0 1.5em;
+  font-size: 85%;
+  color: #046274;
+  background: none;
+}
+.fees-ppsr .field-type-number-decimal h3.note .ui-icon {
+  left: -0 !important;
+}
+.fees-ppsr .field-type-number-decimal .note-content {
+  padding: 0.3em 1em;
+  font-size: 80%;
+}
+.fees-ppsr .views-field-field-note {
+  border: none;
+  position: absolute;
+  background: none !important;
+}
+.fees-ppsr table.views-table caption {
+  text-align: left;
+}
+.fees-ppsr table.views-table .field-item {
+  width: 18%;
+}
+.fees-ppsr table.views-table th, 
+.fees-ppsr table.views-table th a {
+  color: #FFFFFF;
+  text-align: left;
+  padding: 4px;
+  background-color: #125361;
+}
+.fees-ppsr table.views-table td {
+  padding: 4px;
+}
+.fees-ppsr table.views-table td:nth-child(2),
+.fees-ppsr table.views-table th:nth-child(2) {
+  padding-left: 3.5em;
+}
+.fees-ppsr table.views-table tr:nth-child(even) td {
+  background-color: #EAEAEA;
+}
+/* Case Study design elements */
+.node-type-case-study .page__title {
+  color: #15505F;
+  float: right;
+  width: 100%;
+  border: none medium;
+  margin-top: 3em;
+}
+.node-type-case-study .field-name-field-feature-image img, .node-type-case-study .field-item img {
+  max-width: 80%;
+  margin-left: 8%;
+}
+.field-name-field-case-study-number {
+  background: transparent url('../../images/large-magnify-glass.gif') no-repeat left top;
+  padding-left: 1.6em;
+  min-height: 1.6em;
+  margin-top: 0.4em;
+  font-size: 3em;
+  color: #15505F;
+  float: left;
+  position: absolute;
+  line-height: 1;
+}
+.field-name-field-main-purple-title .tip h2, .tip h2 {
+  color: #FFFFFF;
+  background-color: #15505F;
+  float: left;
+  padding: 0.4em;
+  border-radius: 24px;
+  margin: -1em 1em 3em -1em;
+  font-weight: bold;
+}
+.field-name-field-disclaimer {
+  font-size: 0.8em;
+  color: #15505F;
+  font-style: italic;
+}
+.field-name-body .tip {
+  width: 64%;
+  float: right;
+}
+.tip {
+  background-color: #FEE004;
+  font-weight: bold;
+  padding: 0.4em;
+  margin-left: 1em;
+}
+.tip p {
+  margin-left: 2.8em;
+}
+.field-name-field-main-purple-title .field-item, 
+.field-name-field-purple-group .field-item {
+  background-color: #ECE4ED;
+  padding: 0.4em;	
+  margin-top: 1em;
+}
+.field-name-field-main-purple-title h2 {
+  color: #800040;
+  font-weight: normal;
+}
+.field-name-field-green-group h3, 
+.field-name-field-purple-group h3, 
+.field-name-field-main-green-title h2 {
+  color: #15505F;
+  font-weight: normal;
+}
+.field-name-field-main-green-title .field-item,
+.field-name-field-green-group .field-item {
+  background-color: #DAE4E8;
+  padding: 0.4em;	
+  margin-top: 1em;
+}
+.field-name-field-green-group h2:first-child, .field-name-field-purple-group h2:first-child {
+  position: absolute;
+}
+.field-name-field-green-group h2, .field-name-field-purple-group h2 {
+  color: #FFFFFF;
+  padding: 0.4em 0.8em;
+  border-radius: 34px;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: inline;
+  float: left;
+  margin: 0 1em 0 0;
+  min-width: 0.6em;
+  text-align: center;
+}
+.field-name-field-purple-group h2 {
+  background-color: #924C88;
+}
+.field-name-field-green-group h2 {
+  background-color: #15505F;
+}
+
+/* Case Study view element */
+td.case-study {
+  background: transparent none repeat scroll 0% 0%;
+  padding-bottom: 1em;
+  min-height: 10.4em;
+}
+td.case-study img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.3;
+  max-height: 190px;
+  border: 3px dotted #006170;
+  width: 90%;
+}
+.case-study h2.node-title {
+  position: relative;
+  z-index: 100;
+  text-shadow: 2px 1px 6px #FFFFFF;
+  font-size: 1.1em;
+}
+.views-view-grid td.case-study article {
+  width: 100%;
+  position: relative;
+  margin-top: 1.4em;
+}
+.views-view-grid td.case-study header {
+  width: 90%;
+}
+@media only screen and (max-width: 800px) {
+  td.case-study img {
+     width: 94%;
+     max-height: 174px;
+  }
+}
+/* Blog and speeches view/page element */
+.page-blog-speeches .view-home-page-blog-articles .views-row {
+  border-bottom: 1px dotted #666;
+  padding: 1em;
+}
+.page-blog-speeches .view-home-page-blog-articles .views-row-odd {
+  background-color: #EAF0F3;
+}
+.page-blog-speeches .view-home-page-blog-articles .views-row  h3 {
+  margin: 0.5em 0 0;
+}
+.page-blog-speeches .view-home-page-blog-articles .views-row .field-name-field-entry-type {
+  float: right;
+  background-color: #125361;
+  color: #FFF;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 0.8em;
+  display: inline-block;
+  min-width: 5em;
+  text-align: center;
+}
+.page-blog-speeches span.date-display-single {
+  display: block;
+  padding-top: 0.5em;
+  font-size: 0.9em;
+}
+
+
+/* standard green button design elements */
+a.green-btn,
+.green-btn a {
+  color: #FFFFFF;
+  background-image: url('../../images/white-chevron.png');
+  background-color: #006171 !important;
+  background-position: 94% center !important;
+  text-decoration: none;
+  display: inline-block;
+  background-repeat: no-repeat;
+  padding: .5em 2.8em .5em 1em;
+}
+a.green-btn[href^="https://transact"], 
+.green-btn a[href^="https://transact"] {
+  background-image: url('../../images/register-icon-white.png') !important;
+  padding: .5em 2.8em .5em 1em;
+}
+
+/* Business days calculator design elements */
+.calculander a {
+  color: #FFFFFF;
+  background-image: url('../../images/calculander.png');
+  background-color: #006171; 
+  background-position: 94% center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  padding: .5em 2.1em .5em 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  margin: 0 .3em .3em;
+}
+.green-btn a:focus, 
+.green-btn a:hover, 
+.calculander a:focus,
+.calculander a:hover {
+  text-decoration: underline;
+}
+/* Glossary design elements */
+.node-type-glossary .field-name-field-link-to {
+  border: 1px dotted #000;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.arrow-left {
+  background: transparent url('../../images/grey-chevron.png') no-repeat scroll left center;
+  padding-left: 2em;
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url('../../images/overlay.png') repeat 0 0; opacity: 0.9; filter: alpha(opacity = 90);}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:21px; height:21px; background:url('../../images/controls.png') no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url('../../images/controls.png') no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url('../../images/controls.png') no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url('../../images/controls.png') no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url('../../images/controls.png') left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url('../../images/controls.png') right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url('../../images/border.png') 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url('../../images/border.png') 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxLoadingOverlay{background:url('../../images/loading_background.png') no-repeat center center;}
+        #cboxLoadingGraphic{background:url('../../images/loading.gif') no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url('../../images/controls.png') no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url('../../images/controls.png') no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url('../../images/controls.png') no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+    GifPlayer Core Style:
+*/
+ins.play-gif{
+  position: absolute;
+  font-family: Arial, sans serif;
+  width: 50px;
+  height: 50px;
+  line-height: 52px;
+  text-align: center;
+  background: #222;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 50%;
+  opacity: .9;
+  border: 4px solid #fff;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+ins.play-gif:hover{opacity:.5;}
+
+.gifplayer-wrapper{
+  position:relative;
+  display: inline-block;
+}
+
+.spinner {
+  height:50px;
+  width:50px;
+  margin:0px auto;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-25px;
+  margin-left:-25px;
+  -webkit-animation: rotation .6s infinite linear;
+  -moz-animation: rotation .6s infinite linear;
+  -o-animation: rotation .6s infinite linear;
+  animation: rotation .6s infinite linear;
+  border-left:6px solid rgba(256,256,256,.15);
+  border-right:6px solid rgba(256,256,256,.15);
+  border-bottom:6px solid rgba(256,256,256,.15);
+  border-top:6px solid rgba(256,256,256,.8);
+  border-radius:100%;
+}
+
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(359deg);}
+}
